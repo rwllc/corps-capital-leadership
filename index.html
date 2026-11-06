@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CORPS Capital — 3-Day Strategic Leadership Session · Nov 9–11, 2026</title>
+  <style>
+    :root {
+      --black: #0b0e13;
+      --panel: #121723;
+      --panel2: #171d2b;
+      --gold: #c79a3b;
+      --gold-bright: #f0d49a;
+      --gold-line: #8a6c2c;
+      --ink: #e9edf2;
+      --soft: #9fb0c0;
+      --muted: #6f7d8c;
+      --line: #2a3445;
+      --green: #3a8f63;
+      --red: #b9554f;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ---- HEADER ---- */
+    .header {
+      background: rgba(11,14,19,.97);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .brand { font-weight: 800; font-size: 16px; color: #fff; }
+    .brand span { color: var(--gold); }
+    .header-meta { color: var(--muted); font-size: 12px; margin-top: 1px; }
+    .header-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .save-status { color: #7fd6a6; font-size: 12px; font-weight: 600; opacity: 0; transition: opacity .3s; }
+    .save-status.show { opacity: 1; }
+
+    /* ---- TABS ---- */
+    .tabs {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      padding: 0 20px;
+      gap: 2px;
+      overflow-x: auto;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      color: var(--soft);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 11px 16px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: inherit;
+      transition: color .15s, border-color .15s;
+    }
+    .tab-btn:hover { color: #fff; }
+    .tab-btn.active { color: var(--gold-bright); border-bottom-color: var(--gold); }
+
+    /* ---- PANES ---- */
+    .pane { display: none; max-width: 1180px; margin: 0 auto; padding: 28px 22px 80px; }
+    .pane.active { display: block; }
+
+    /* ---- SECTION HEADERS ---- */
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 36px 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .section-header:first-of-type { margin-top: 0; }
+    .section-icon { font-size: 20px; margin-top: 2px; }
+    .section-title { font-size: 18px; font-weight: 700; color: #fff; }
+    .section-desc { color: var(--soft); font-size: 13px; margin-top: 2px; }
+
+    /* ---- CARDS ---- */
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: 2px solid var(--gold-line);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      color: var(--gold-bright);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin: 0 0 4px;
+    }
+    .card .hint { color: var(--muted); font-size: 12px; margin: 0 0 14px; line-height: 1.5; }
+
+    /* ---- FORMS ---- */
+    label {
+      display: block;
+      color: var(--soft);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin: 14px 0 5px;
+    }
+    label:first-child { margin-top: 0; }
+    textarea, input[type="text"], input[type="date"], select {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 14px;
+      padding: 9px 11px;
+      width: 100%;
+      resize: vertical;
+      transition: border-color .15s;
+    }
+    textarea:focus, input:focus, select:focus {
+      outline: none;
+      border-color: var(--gold-line);
+    }
+    textarea { min-height: 72px; }
+    select option { background: var(--panel2); }
+
+    /* ---- BUTTONS ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 13px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--panel2);
+      color: var(--soft);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color .15s, border-color .15s, background .15s;
+      white-space: nowrap;
+    }
+    .btn:hover { color: #fff; border-color: var(--gold-line); }
+    .btn.gold { background: var(--gold); color: #1a1300; border-color: var(--gold); }
+    .btn.gold:hover { background: var(--gold-bright); border-color: var(--gold-bright); }
+    .btn.sm { padding: 4px 10px; font-size: 12px; }
+    .btn.danger:hover { color: #e88; border-color: var(--red); }
+
+    /* ---- GRID ---- */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 680px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    /* ---- TABLES ---- */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 480px; }
+    th, td { padding: 9px 11px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--gold-bright); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; white-space: nowrap; }
+    td textarea, td input, td select { margin: 0; font-size: 13px; padding: 6px 9px; }
+    td textarea { min-height: 50px; resize: vertical; }
+    tr:last-child td { border-bottom: none; }
+
+    /* ---- TOOLBAR ---- */
+    .toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+    .toolbar .spacer { flex: 1; }
+
+    /* ---- CALLOUT ---- */
+    .callout {
+      background: #15233a;
+      border: 1px solid #294063;
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+      padding: 11px 15px;
+      margin: 14px 0 2px;
+      color: #dbe4ef;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .callout strong { color: var(--gold-bright); }
+
+    /* ---- AGENDA ---- */
+    .page-title { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .page-sub { color: var(--soft); font-size: 14px; margin-bottom: 24px; }
+    .day-header {
+      background: linear-gradient(135deg, var(--panel), var(--panel2));
+      border: 1px solid var(--gold-line);
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin: 24px 0 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .day-name { font-size: 20px; font-weight: 800; color: #fff; }
+    .day-date { color: var(--gold); font-size: 14px; font-weight: 600; }
+    .day-who { color: var(--soft); font-size: 13px; margin-left: auto; }
+    .agenda-group {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 4px 18px 10px;
+      margin-bottom: 6px;
+    }
+    .agenda-block {
+      display: flex;
+      gap: 18px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(42,52,69,.4);
+      align-items: flex-start;
+    }
+    .agenda-block:last-child { border-bottom: none; }
+    .time { color: var(--gold); font-size: 12px; font-weight: 700; min-width: 72px; padding-top: 2px; white-space: nowrap; }
+    .session-title { color: var(--ink); font-weight: 600; font-size: 14px; }
+    .session-desc { color: var(--soft); font-size: 12px; margin-top: 3px; line-height: 1.5; }
+    .session-break { color: var(--muted); font-style: italic; font-size: 13px; }
+
+    /* ---- ISSUES ---- */
+    .iss-num { color: var(--muted); font-size: 12px; padding-top: 12px !important; min-width: 24px; }
+
+    /* ---- FOOTER ---- */
+    footer {
+      text-align: center;
+      padding: 20px 22px 40px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      margin-top: 20px;
+    }
+
+    @media print {
+      .header, .tabs, .btn, .toolbar { display: none !important; }
+      .pane { display: block !important; padding: 0; }
+      body { background: #fff; color: #111; }
+      .card { background: #f8f8f8; border-color: #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <div class="brand">CORPS<span> Capital</span></div>
+    <div class="header-meta">3-Day Strategic Leadership Session &middot; Dallas, TX &middot; Nov 9&ndash;11, 2026</div>
+  </div>
+  <div class="header-right">
+    <span class="save-status" id="saveStatus">Saved ✓</span>
+    <button class="btn sm" onclick="exportData()" title="Save working data as a JSON file">↓ Export</button>
+    <button class="btn sm" onclick="document.getElementById('importFile').click()" title="Load previously exported data">↑ Import</button>
+    <input type="file" id="importFile" accept=".json" style="display:none" onchange="importData(event)">
+    <button class="btn sm gold" onclick="copyShareLink()" title="Copy a URL that includes all current data — open on any device">🔗 Share Link</button>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab('agenda',this)">📅 Agenda</button>
+  <button class="tab-btn" onclick="switchTab('vision',this)">🎯 Vision · People · Issues</button>
+  <button class="tab-btn" onclick="switchTab('traction',this)">📊 Data · Process · Traction</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB 1: AGENDA
+════════════════════════════════════════════════════════ -->
+<div class="pane active" id="pane-agenda">
+
+  <div class="page-title">3-Day Strategic Leadership Session</div>
+  <div class="page-sub">CORPS Capital Companies &middot; Dallas, TX &middot; November 9&ndash;11, 2026</div>
+
+  <!-- MONDAY -->
+  <div class="day-header">
+    <span class="day-name">Monday</span>
+    <span class="day-date">November 9</span>
+    <span class="day-who">Leadership Core &mdash; Tom &middot; Tino &middot; Bob</span>
+  </div>
+  <div class="agenda-group">
+    <div class="agenda-block">
+      <div class="time">9:00 AM</div>
+      <div>
+        <div class="session-title">Welcome &amp; Context Setting</div>
+        <div class="session-desc">Bob frames the purpose of the three days. What we&rsquo;re building toward and why now.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">9:15 AM</div>
+      <div>
+        <div class="session-title">Strategic Vision Presentation</div>
+        <div class="session-desc">Tom presents the CORPS Capital Strategic Wingman Partnership platform deck. Full walk-through. Questions after.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">10:15 AM</div>
+      <div class="session-break">Break — 15 min</div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">10:30 AM</div>
+      <div>
+        <div class="session-title">Leadership Operating Framework Overview</div>
+        <div class="session-desc">Bob introduces the structured system the team will operate on. Six core components: Vision &middot; People &middot; Data &middot; Process &middot; Issues &middot; Traction. How they fit together and why they matter now.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">11:00 AM</div>
+      <div>
+        <div class="session-title">Vision Workshop</div>
+        <div class="session-desc">Tom and Tino build out the company&rsquo;s shared vision together: CORPS values, core focus, 10-year target, 3-year picture, 1-year plan. First pass. Working document.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">12:00 PM</div>
+      <div class="session-break">Working Lunch &mdash; 45 min</div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">12:45 PM</div>
+      <div>
+        <div class="session-title">Accountability Structure</div>
+        <div class="session-desc">Sketch the Accountability Chart: functions the business must run, one name per seat. GWC check per person per seat. Where are the gaps?</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">1:30 PM</div>
+      <div>
+        <div class="session-title">Issues List Build + Prioritization</div>
+        <div class="session-desc">Surface the top company-wide issues. Use Identify &mdash; Discuss &mdash; Solve discipline. First pass: Tom + Tino.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">2:30 PM</div>
+      <div>
+        <div class="session-title">Day 1 Wrap</div>
+        <div class="session-desc">Align on what gets carried into Tuesday. Prep for Brian&rsquo;s introduction. Any overnight action items.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUESDAY AM -->
+  <div class="day-header">
+    <span class="day-name">Tuesday AM</span>
+    <span class="day-date">November 10 &middot; 9:00 &ndash; 12:00</span>
+    <span class="day-who">Add Brian</span>
+  </div>
+  <div class="agenda-group">
+    <div class="agenda-block">
+      <div class="time">9:00 AM</div>
+      <div>
+        <div class="session-title">Strategic Vision Presentation &mdash; Brian</div>
+        <div class="session-desc">Tom presents the deck to Brian. Brian hears the vision directly from Tom.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">10:00 AM</div>
+      <div>
+        <div class="session-title">Brian&rsquo;s Perspective + Input</div>
+        <div class="session-desc">Open discussion. What Brian sees from the field. His issues and priorities added to the list.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">11:00 AM</div>
+      <div>
+        <div class="session-title">Accountability Chart &mdash; Brian&rsquo;s Seat</div>
+        <div class="session-desc">Map Brian&rsquo;s function(s). GWC check on current seat. Identify gaps or misalignments.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">11:30 AM</div>
+      <div>
+        <div class="session-title">Issues Triage &mdash; Brian&rsquo;s Input</div>
+        <div class="session-desc">IDS discipline: surface, prioritize, solve what can be solved at this level.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">12:00 PM</div>
+      <div class="session-break">Lunch Break</div>
+    </div>
+  </div>
+
+  <!-- TUESDAY PM -->
+  <div class="day-header">
+    <span class="day-name">Tuesday PM</span>
+    <span class="day-date">November 10 &middot; 1:00 &ndash; 4:30</span>
+    <span class="day-who">Add Jasmine</span>
+  </div>
+  <div class="agenda-group">
+    <div class="agenda-block">
+      <div class="time">1:00 PM</div>
+      <div>
+        <div class="session-title">Strategic Vision Presentation &mdash; Jasmine</div>
+        <div class="session-desc">Tom presents the deck to Jasmine. She hears the vision from Tom.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">2:00 PM</div>
+      <div>
+        <div class="session-title">Jasmine&rsquo;s Perspective + Input</div>
+        <div class="session-desc">Her view of the client experience, marketing, growth opportunities. Issues added to the list.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">3:00 PM</div>
+      <div>
+        <div class="session-title">Vision Refinement + Q4 Rocks</div>
+        <div class="session-desc">Tighten the 1-Year Plan based on input from Brian and Jasmine. Set the first round of 90-day company Rocks.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">4:00 PM</div>
+      <div>
+        <div class="session-title">Day 2 Wrap</div>
+        <div class="session-desc">Brief: what goes to the full team Wednesday. Assign overnight prep. Tom and Tino review.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEDNESDAY AM -->
+  <div class="day-header">
+    <span class="day-name">Wednesday AM</span>
+    <span class="day-date">November 11 &middot; 9:00 &ndash; 12:00</span>
+    <span class="day-who">Full Team</span>
+  </div>
+  <div class="agenda-group">
+    <div class="agenda-block">
+      <div class="time">9:00 AM</div>
+      <div>
+        <div class="session-title">Welcome &mdash; Full Team</div>
+        <div class="session-desc">Bob sets the tone. Tom acknowledges the team. Why today matters.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">9:15 AM</div>
+      <div>
+        <div class="session-title">Strategic Vision Presentation &mdash; Full Team</div>
+        <div class="session-desc">Tom presents the finalized deck to the entire team. Every person hears the same vision from the same voice.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">10:15 AM</div>
+      <div>
+        <div class="session-title">Leadership Framework &mdash; Full Team Introduction</div>
+        <div class="session-desc">Bob introduces all six components. How the team will operate, meet, and make decisions going forward.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">11:00 AM</div>
+      <div>
+        <div class="session-title">People: Right People, Right Seats</div>
+        <div class="session-desc">Introduce CORPS Values and what the People framework means in practice. Walk through the Accountability Chart with the full team. Each person sees their seat.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">11:30 AM</div>
+      <div>
+        <div class="session-title">Q&amp;A + Full Team Issues</div>
+        <div class="session-desc">Open floor. Everyone adds to the Issues List. Everything gets heard.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">12:00 PM</div>
+      <div class="session-break">Lunch Break</div>
+    </div>
+  </div>
+
+  <!-- WEDNESDAY PM -->
+  <div class="day-header">
+    <span class="day-name">Wednesday PM</span>
+    <span class="day-date">November 11 &middot; 1:00 &ndash; 5:00</span>
+    <span class="day-who">Leadership + Individual Sessions</span>
+  </div>
+  <div class="agenda-group">
+    <div class="agenda-block">
+      <div class="time">1:00 PM</div>
+      <div>
+        <div class="session-title">Data + Process + Platform Walkthrough</div>
+        <div class="session-desc">Introduce the Scorecard. Walk through the CCC Platform &mdash; how the team will use it to capture, track, and act on intelligence. Core Processes overview: what gets documented, who owns it.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">2:15 PM</div>
+      <div>
+        <div class="session-title">Company Rocks &mdash; Final Set</div>
+        <div class="session-desc">Finalize the Q4 90-day priorities for the company. Each leader owns at least one Rock. Due dates confirmed.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">3:00 PM</div>
+      <div>
+        <div class="session-title">Individual Conversations</div>
+        <div class="session-desc">Bob meets with key team members one-on-one. Tom + Tino continue issues work and plan the first Weekly Meeting Pulse.</div>
+      </div>
+    </div>
+    <div class="agenda-block">
+      <div class="time">4:30 PM</div>
+      <div>
+        <div class="session-title">Session Close</div>
+        <div class="session-desc">Commitments recap. Next steps. Tom closes. What does winning look like by December 31?</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /pane-agenda -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB 2: VISION · PEOPLE · ISSUES
+════════════════════════════════════════════════════════ -->
+<div class="pane" id="pane-vision">
+
+  <!-- VISION -->
+  <div class="section-header">
+    <div class="section-icon">🎯</div>
+    <div>
+      <div class="section-title">Vision / Traction Organizer</div>
+      <div class="section-desc">Build the company&rsquo;s shared direction. Answers: where are we going and how do we get there?</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>CORPS Values</h3>
+      <div class="hint">What we stand for. 3&ndash;7 non-negotiable values that define who belongs here and how we operate.</div>
+      <textarea id="f-corps-values" rows="7" placeholder="1. &#10;2. &#10;3. &#10;4. &#10;5."></textarea>
+    </div>
+    <div class="card">
+      <h3>Core Focus</h3>
+      <div class="hint">Why CORPS Capital exists. Two parts: our niche (what we do / for whom) and our cause (the deeper why).</div>
+      <label>Our Niche</label>
+      <textarea id="f-niche" rows="3" placeholder="What we do and who we do it for..."></textarea>
+      <label>Our Cause / Passion / Why</label>
+      <textarea id="f-cause" rows="3" placeholder="Why this matters beyond revenue..."></textarea>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>10-Year Target</h3>
+    <div class="hint">One clear, measurable, big goal. Specific enough to know when you&rsquo;ve hit it. Big enough to require real strategy.</div>
+    <textarea id="f-10yr" rows="3" placeholder="By [year], CORPS Capital will..."></textarea>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>Marketing Strategy</h3>
+      <div class="hint">The uniques and target market that will get you to the 10-year target.</div>
+      <label>Target Market</label>
+      <textarea id="f-target-market" rows="3" placeholder="Who we serve. Demographics, psychographics, specific. Be ruthlessly clear."></textarea>
+      <label>Three Uniques (what only we do or how only we do it)</label>
+      <textarea id="f-uniques" rows="4" placeholder="1. &#10;2. &#10;3."></textarea>
+    </div>
+    <div class="card">
+      <h3>3-Year Picture</h3>
+      <div class="hint">What the company looks like in 3 years. Revenue, headcount, key milestones. What does it feel like?</div>
+      <label>Revenue Target</label>
+      <input type="text" id="f-3yr-revenue" placeholder="$XXM">
+      <label>Headcount / Team</label>
+      <input type="text" id="f-3yr-headcount" placeholder="X advisors, X support...">
+      <label>What else is true in 3 years</label>
+      <textarea id="f-3yr-other" rows="4" placeholder="What has been built? What does the firm feel like?"></textarea>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>1-Year Plan</h3>
+    <div class="hint">What must be true December 31. Revenue, profit, 3&ndash;7 specific goals.</div>
+    <div class="grid-2">
+      <div>
+        <label>Revenue Goal</label>
+        <input type="text" id="f-1yr-revenue" placeholder="$XXM">
+        <label>Net Profit Goal</label>
+        <input type="text" id="f-1yr-profit" placeholder="$XXM">
+        <label>Headcount Goal</label>
+        <input type="text" id="f-1yr-headcount" placeholder="# people">
+      </div>
+      <div>
+        <label>Key Goals (3&ndash;7) for Year End</label>
+        <textarea id="f-1yr-goals" rows="8" placeholder="1. &#10;2. &#10;3. &#10;4."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Q4 2026 Rocks &mdash; Company 90-Day Priorities</h3>
+    <div class="hint">3&ndash;7 most important things the company must accomplish this quarter. Each has one owner and a clear due date.</div>
+    <div class="toolbar">
+      <button class="btn sm" onclick="addRock('rocks-vto')">+ Add Rock</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:38%">Rock / Priority</th>
+            <th style="width:18%">Owner</th>
+            <th style="width:16%">Due</th>
+            <th style="width:18%">Status</th>
+            <th style="width:10%"></th>
+          </tr>
+        </thead>
+        <tbody id="rocks-vto"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PEOPLE -->
+  <div class="section-header">
+    <div class="section-icon">👥</div>
+    <div>
+      <div class="section-title">People</div>
+      <div class="section-desc">Right people, right seats. The Accountability Chart defines the seats. GWC tells you if you have the right person in each one.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Accountability Chart</h3>
+    <div class="hint">List every function the business must run. One name per seat. GWC: Gets it / Wants it / Capacity. Any single No = wrong seat.</div>
+    <div class="toolbar">
+      <button class="btn sm" onclick="addSeat()">+ Add Seat</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:22%">Function / Seat</th>
+            <th style="width:18%">Who&rsquo;s In It</th>
+            <th style="width:9%">Gets It</th>
+            <th style="width:9%">Wants It</th>
+            <th style="width:9%">Capacity</th>
+            <th style="width:23%">Notes</th>
+            <th style="width:10%"></th>
+          </tr>
+        </thead>
+        <tbody id="seats-table"></tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <strong>GWC rule:</strong> Gets it = naturally wired for this role (not trainable). Wants it = genuinely wants it, not just willing. Capacity = bandwidth, skill, and mental fit. Any single No = wrong seat, 99% of the time.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>People Analyzer</h3>
+    <div class="hint">Rate each person against each CORPS Value: + (yes), +/&minus; (sometimes), &minus; (no). Mostly minuses in a row = wrong person.</div>
+    <label>Define CORPS Values (column headers &mdash; set these first)</label>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
+      <input type="text" id="pa-v1" placeholder="Value 1" style="width:150px;" oninput="updatePAHeaders(); triggerSave();">
+      <input type="text" id="pa-v2" placeholder="Value 2" style="width:150px;" oninput="updatePAHeaders(); triggerSave();">
+      <input type="text" id="pa-v3" placeholder="Value 3" style="width:150px;" oninput="updatePAHeaders(); triggerSave();">
+      <input type="text" id="pa-v4" placeholder="Value 4" style="width:150px;" oninput="updatePAHeaders(); triggerSave();">
+      <input type="text" id="pa-v5" placeholder="Value 5" style="width:150px;" oninput="updatePAHeaders(); triggerSave();">
+    </div>
+    <div class="toolbar">
+      <button class="btn sm" onclick="addPARow()">+ Add Person</button>
+    </div>
+    <div class="table-wrap">
+      <table id="pa-table">
+        <thead>
+          <tr>
+            <th style="width:16%">Name</th>
+            <th id="pa-th1">Value 1</th>
+            <th id="pa-th2">Value 2</th>
+            <th id="pa-th3">Value 3</th>
+            <th id="pa-th4">Value 4</th>
+            <th id="pa-th5">Value 5</th>
+            <th style="width:11%">GWC</th>
+            <th style="width:8%"></th>
+          </tr>
+        </thead>
+        <tbody id="pa-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ISSUES -->
+  <div class="section-header">
+    <div class="section-icon">⚡</div>
+    <div>
+      <div class="section-title">Issues List</div>
+      <div class="section-desc">The company&rsquo;s issues, obstacles, ideas, and undiscussables. Surface everything. IDS: Identify &middot; Discuss &middot; Solve.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="toolbar">
+      <button class="btn" onclick="addIssue()">+ Add Issue</button>
+      <div class="spacer"></div>
+      <span style="color:var(--muted);font-size:12px;">IDS = Identify &middot; Discuss &middot; Solve</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:3%">#</th>
+            <th style="width:36%">Issue</th>
+            <th style="width:13%">Owner</th>
+            <th style="width:9%">Priority</th>
+            <th style="width:11%">Day Raised</th>
+            <th style="width:13%">IDS Status</th>
+            <th style="width:15%">Notes / Resolution</th>
+          </tr>
+        </thead>
+        <tbody id="issues-table"></tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <strong>The rule:</strong> The stated problem is rarely the real issue. Keep asking &ldquo;what&rsquo;s really going on?&rdquo; before moving to Solve. Speed is not the goal here &mdash; getting to the root is.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Notes &mdash; Vision + People Day</h3>
+    <div class="hint">Freeform. Quotes, observations, things said in the room that shouldn&rsquo;t be lost.</div>
+    <textarea id="f-vision-notes" rows="8" placeholder="Day 1 and Day 2 notes..."></textarea>
+  </div>
+
+</div><!-- /pane-vision -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB 3: DATA · PROCESS · TRACTION
+════════════════════════════════════════════════════════ -->
+<div class="pane" id="pane-traction">
+
+  <!-- DATA -->
+  <div class="section-header">
+    <div class="section-icon">📊</div>
+    <div>
+      <div class="section-title">Data</div>
+      <div class="section-desc">Running the business on numbers, not gut feel. The Scorecard: a handful of weekly metrics that tell you if the business is healthy.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Scorecard</h3>
+    <div class="hint">5&ndash;15 weekly numbers. Each has one owner and a clear weekly goal. Red or green, nothing in between.</div>
+    <div class="toolbar">
+      <button class="btn sm" onclick="addScorecard()">+ Add Metric</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:26%">Metric</th>
+            <th style="width:14%">Owner</th>
+            <th style="width:12%">Weekly Goal</th>
+            <th style="width:12%">This Week</th>
+            <th style="width:10%">Status</th>
+            <th style="width:26%">Notes</th>
+          </tr>
+        </thead>
+        <tbody id="scorecard-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>CCC Platform &mdash; Team Introduction Notes</h3>
+    <div class="hint">What clicked during the platform walkthrough. What needs follow-up. Action items for adoption.</div>
+    <textarea id="f-ccc-notes" rows="6" placeholder="Demo observations, team feedback, questions asked, next steps for onboarding..."></textarea>
+    <div class="callout" style="margin-top:14px;">
+      <strong>The CCC Platform</strong> is CORPS Capital&rsquo;s internal strategic intelligence hub. Client intelligence, team strategy notes, and the AI assistant (The Brain) all live there. Capture &rarr; Think &rarr; Act. This session&rsquo;s working document is the bridge to it.
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="section-header">
+    <div class="section-icon">⚙️</div>
+    <div>
+      <div class="section-title">Process</div>
+      <div class="section-desc">The core ways the business gets done. Documented, simplified, followed by all. Usually 6&ndash;10 processes that cover everything.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Core Processes</h3>
+    <div class="hint">Name each core process. Mark its documentation status. Assign an owner. This list tells you where the gaps are.</div>
+    <div class="toolbar">
+      <button class="btn sm" onclick="addProcess()">+ Add Process</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:24%">Process Name</th>
+            <th style="width:30%">What It Covers</th>
+            <th style="width:15%">Owner</th>
+            <th style="width:18%">Status</th>
+            <th style="width:13%"></th>
+          </tr>
+        </thead>
+        <tbody id="process-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TRACTION -->
+  <div class="section-header">
+    <div class="section-icon">🏁</div>
+    <div>
+      <div class="section-title">Traction</div>
+      <div class="section-desc">Rocks + Meeting Pulse. Execution discipline. This is how the vision actually happens, 90 days at a time.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Rocks &mdash; Q4 2026 (Company + Individual)</h3>
+    <div class="hint">All rocks in one view. Company Rocks set the direction. Individual Rocks get it done. 3&ndash;7 per person maximum.</div>
+    <div class="toolbar">
+      <button class="btn sm" onclick="addRockFull('all-rocks')">+ Add Rock</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:32%">Rock / Priority</th>
+            <th style="width:13%">Owner</th>
+            <th style="width:10%">Type</th>
+            <th style="width:12%">Due</th>
+            <th style="width:13%">Status</th>
+            <th style="width:20%">Notes</th>
+          </tr>
+        </thead>
+        <tbody id="all-rocks"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Weekly Meeting Pulse &mdash; L10 Structure</h3>
+    <div class="hint">Same meeting, same day, same agenda, every week. 90 minutes. Runs on issues. The heartbeat of the business.</div>
+    <div class="grid-2">
+      <div>
+        <label>Meeting Day &amp; Time</label>
+        <input type="text" id="f-l10-day" placeholder="e.g. Mondays at 9:00 AM ET">
+        <label>Who Attends</label>
+        <textarea id="f-l10-who" rows="5" placeholder="Names / roles..."></textarea>
+      </div>
+      <div>
+        <label>L10 Agenda Segments</label>
+        <textarea id="f-l10-agenda" rows="9"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Action Items from This Session</h3>
+    <div class="hint">Who does what by when. Commitments made in these three days don&rsquo;t disappear when people go home.</div>
+    <div class="toolbar">
+      <button class="btn sm" onclick="addAction()">+ Add Action</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:38%">Action</th>
+            <th style="width:16%">Owner</th>
+            <th style="width:14%">Due Date</th>
+            <th style="width:14%">Status</th>
+            <th style="width:18%">Notes</th>
+          </tr>
+        </thead>
+        <tbody id="actions-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Session Notes &mdash; Day 3 + Overall</h3>
+    <div class="hint">Freeform. Observations, quotes, things that came up that need to live somewhere.</div>
+    <textarea id="f-session-notes" rows="12" placeholder="Day 3 notes, quotes, observations, follow-up ideas, what surprised you..."></textarea>
+  </div>
+
+</div><!-- /pane-traction -->
+
+<footer>
+  CORPS Capital Companies &middot; 3-Day Strategic Leadership Session &middot; Dallas, TX &middot; November 9&ndash;11, 2026
+</footer>
+
+
+<script>
+/* ══════════════════════════════════════════════
+   TAB SWITCHING
+══════════════════════════════════════════════ */
+function switchTab(id, btn) {
+  document.querySelectorAll('.pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('pane-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* ══════════════════════════════════════════════
+   AUTO-SAVE (localStorage, debounced 700ms)
+══════════════════════════════════════════════ */
+const STORAGE_KEY = 'ccc-session-nov2026';
+let saveTimer = null;
+
+function triggerSave() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveAll, 700);
+}
+
+function showStatus(msg, duration = 2000) {
+  const el = document.getElementById('saveStatus');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.classList.remove('show'), duration);
+}
+
+function saveAll() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(collectData()));
+  showStatus('Saved ✓');
+}
+
+document.addEventListener('input', triggerSave);
+document.addEventListener('change', triggerSave);
+
+/* ══════════════════════════════════════════════
+   DATA COLLECTION
+══════════════════════════════════════════════ */
+function collectData() {
+  const d = {};
+  // Named text fields
+  document.querySelectorAll('[id^="f-"], [id^="pa-v"]').forEach(el => {
+    d[el.id] = el.value;
+  });
+  // Tables
+  d._tables = {};
+  ['rocks-vto','seats-table','pa-body','issues-table',
+   'scorecard-table','process-table','all-rocks','actions-table'].forEach(id => {
+    const tbody = document.getElementById(id);
+    if (!tbody) return;
+    d._tables[id] = [...tbody.querySelectorAll('tr')].map(tr =>
+      [...tr.querySelectorAll('input,select,textarea')].map(el => el.value)
+    );
+  });
+  return d;
+}
+
+/* ══════════════════════════════════════════════
+   DATA RESTORE
+══════════════════════════════════════════════ */
+function restoreData(d) {
+  if (!d) return;
+  // Named fields
+  Object.entries(d).forEach(([k, v]) => {
+    if (k === '_tables') return;
+    const el = document.getElementById(k);
+    if (el) el.value = v;
+  });
+  updatePAHeaders();
+  // Tables
+  if (!d._tables) return;
+  Object.entries(d._tables).forEach(([tableId, rows]) => {
+    const tbody = document.getElementById(tableId);
+    if (!tbody || !rows.length) return;
+    // Ensure enough rows exist
+    while (tbody.querySelectorAll('tr').length < rows.length) {
+      if (tableId === 'rocks-vto') _addRockSimple(tableId);
+      else if (tableId === 'seats-table') _addSeat();
+      else if (tableId === 'pa-body') _addPARow();
+      else if (tableId === 'issues-table') _addIssue();
+      else if (tableId === 'scorecard-table') _addScorecard();
+      else if (tableId === 'process-table') _addProcess();
+      else if (tableId === 'all-rocks') _addRockFull(tableId);
+      else if (tableId === 'actions-table') _addAction();
+      else break;
+    }
+    // Fill values
+    const trs = tbody.querySelectorAll('tr');
+    rows.forEach((rowVals, ri) => {
+      if (!trs[ri]) return;
+      const inputs = trs[ri].querySelectorAll('input,select,textarea');
+      rowVals.forEach((v, ci) => { if (inputs[ci]) inputs[ci].value = v; });
+    });
+  });
+}
+
+/* ══════════════════════════════════════════════
+   ROW BUILDERS (internal)
+══════════════════════════════════════════════ */
+function removeRow(btn) { btn.closest('tr').remove(); triggerSave(); }
+
+function _html(tr, inner) { tr.innerHTML = inner; return tr; }
+
+function _addRockSimple(tbodyId) {
+  const tbody = document.getElementById(tbodyId);
+  const tr = document.createElement('tr');
+  _html(tr, `<td><input type="text" placeholder="What must get done..."></td>
+    <td><input type="text" placeholder="Owner"></td>
+    <td><input type="date"></td>
+    <td><select>
+      <option value="not-started">Not Started</option>
+      <option value="on">On Track ✓</option>
+      <option value="off">Off Track ✗</option>
+      <option value="done">Done ✓</option>
+    </select></td>
+    <td><button class="btn sm danger" onclick="removeRow(this)">✕</button></td>`);
+  tbody.appendChild(tr); return tr;
+}
+function addRock(tbodyId) { _addRockSimple(tbodyId); }
+
+function _addRockFull(tbodyId) {
+  const tbody = document.getElementById(tbodyId);
+  const tr = document.createElement('tr');
+  _html(tr, `<td><input type="text" placeholder="90-day priority..."></td>
+    <td><input type="text" placeholder="Owner"></td>
+    <td><select><option value="company">Company</option><option value="individual">Individual</option></select></td>
+    <td><input type="date"></td>
+    <td><select>
+      <option value="not-started">Not Started</option>
+      <option value="on">On Track ✓</option>
+      <option value="off">Off Track ✗</option>
+      <option value="done">Done ✓</option>
+    </select></td>
+    <td><input type="text" placeholder="Notes..."></td>`);
+  tbody.appendChild(tr); return tr;
+}
+function addRockFull(id) { _addRockFull(id); }
+
+function _addSeat() {
+  const tbody = document.getElementById('seats-table');
+  const tr = document.createElement('tr');
+  _html(tr, `<td><input type="text" placeholder="Function / Seat"></td>
+    <td><input type="text" placeholder="Name"></td>
+    <td><select><option value="">—</option><option value="Y">Yes</option><option value="N">No</option></select></td>
+    <td><select><option value="">—</option><option value="Y">Yes</option><option value="N">No</option></select></td>
+    <td><select><option value="">—</option><option value="Y">Yes</option><option value="N">No</option></select></td>
+    <td><input type="text" placeholder="Notes..."></td>
+    <td><button class="btn sm danger" onclick="removeRow(this)">✕</button></td>`);
+  tbody.appendChild(tr); return tr;
+}
+function addSeat() { _addSeat(); }
+
+function _addPARow() {
+  const tbody = document.getElementById('pa-body');
+  const tr = document.createElement('tr');
+  const opts = `<option value="">—</option><option value="+">+</option><option value="+/−">+/−</option><option value="−">−</option>`;
+  _html(tr, `<td><input type="text" placeholder="Name"></td>
+    <td><select>${opts}</select></td>
+    <td><select>${opts}</select></td>
+    <td><select>${opts}</select></td>
+    <td><select>${opts}</select></td>
+    <td><select>${opts}</select></td>
+    <td><select><option value="">—</option><option value="GWC">GWC ✓</option><option value="no">Not GWC</option></select></td>
+    <td><button class="btn sm danger" onclick="removeRow(this)">✕</button></td>`);
+  tbody.appendChild(tr); return tr;
+}
+function addPARow() { _addPARow(); }
+
+let _issueNum = 0;
+function _addIssue() {
+  _issueNum++;
+  const tbody = document.getElementById('issues-table');
+  const tr = document.createElement('tr');
+  _html(tr, `<td class="iss-num">${_issueNum}</td>
+    <td><textarea rows="2" placeholder="Describe the issue. What's really going on?"></textarea></td>
+    <td><input type="text" placeholder="Owner"></td>
+    <td><select><option value="1">1 — High</option><option value="2">2</option><option value="3" selected>3 — Med</option><option value="4">4</option><option value="5">5 — Low</option></select></td>
+    <td><select><option value="mon">Monday</option><option value="tue">Tuesday</option><option value="wed">Wednesday</option></select></td>
+    <td><select><option value="open">Open</option><option value="ids-i">Identified</option><option value="ids-d">In Discussion</option><option value="solved">Solved ✓</option></select></td>
+    <td><input type="text" placeholder="Notes / resolution..."></td>`);
+  tbody.appendChild(tr); return tr;
+}
+function addIssue() { _addIssue(); }
+
+function _addScorecard() {
+  const tbody = document.getElementById('scorecard-table');
+  const tr = document.createElement('tr');
+  _html(tr, `<td><input type="text" placeholder="Metric name"></td>
+    <td><input type="text" placeholder="Owner"></td>
+    <td><input type="text" placeholder="Goal"></td>
+    <td><input type="text" placeholder="Actual"></td>
+    <td><select><option value="">—</option><option value="green">✓ On</option><option value="red">✗ Off</option></select></td>
+    <td><input type="text" placeholder="Notes"></td>`);
+  tbody.appendChild(tr); return tr;
+}
+function addScorecard() { _addScorecard(); }
+
+function _addProcess() {
+  const tbody = document.getElementById('process-table');
+  const tr = document.createElement('tr');
+  _html(tr, `<td><input type="text" placeholder="Process name"></td>
+    <td><input type="text" placeholder="What it covers..."></td>
+    <td><input type="text" placeholder="Owner"></td>
+    <td><select><option value="not-yet">Not Documented</option><option value="in-progress">In Progress</option><option value="done">Documented ✓</option></select></td>
+    <td><button class="btn sm danger" onclick="removeRow(this)">✕</button></td>`);
+  tbody.appendChild(tr); return tr;
+}
+function addProcess() { _addProcess(); }
+
+function _addAction() {
+  const tbody = document.getElementById('actions-table');
+  const tr = document.createElement('tr');
+  _html(tr, `<td><input type="text" placeholder="What needs to happen..."></td>
+    <td><input type="text" placeholder="Owner"></td>
+    <td><input type="date"></td>
+    <td><select><option value="open">Open</option><option value="in-progress">In Progress</option><option value="done">Done ✓</option></select></td>
+    <td><input type="text" placeholder="Notes..."></td>`);
+  tbody.appendChild(tr); return tr;
+}
+function addAction() { _addAction(); }
+
+/* ══════════════════════════════════════════════
+   PEOPLE ANALYZER HEADER SYNC
+══════════════════════════════════════════════ */
+function updatePAHeaders() {
+  for (let i = 1; i <= 5; i++) {
+    const v = document.getElementById('pa-v' + i);
+    const th = document.getElementById('pa-th' + i);
+    if (v && th) th.textContent = v.value || ('Value ' + i);
+  }
+}
+
+/* ══════════════════════════════════════════════
+   EXPORT / IMPORT
+══════════════════════════════════════════════ */
+function exportData() {
+  const blob = new Blob([JSON.stringify(collectData(), null, 2)], {type: 'application/json'});
+  const a = Object.assign(document.createElement('a'), {
+    href: URL.createObjectURL(blob),
+    download: 'ccc-session-' + new Date().toISOString().slice(0,10) + '.json'
+  });
+  a.click(); URL.revokeObjectURL(a.href);
+}
+
+function importData(e) {
+  const f = e.target.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    try {
+      restoreData(JSON.parse(ev.target.result));
+      saveAll();
+      showStatus('Imported ✓', 3000);
+    } catch { alert('Could not read file. Must be a valid export.'); }
+  };
+  r.readAsText(f);
+}
+
+/* ══════════════════════════════════════════════
+   SHARE LINK (encodes all data in URL hash)
+══════════════════════════════════════════════ */
+function copyShareLink() {
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(collectData()))));
+  const url = location.origin + location.pathname + '#d=' + encoded;
+  navigator.clipboard.writeText(url)
+    .then(() => showStatus('Link copied! ✓ Open on any device', 4000))
+    .catch(() => { prompt('Copy this link:', url); });
+}
+
+/* ══════════════════════════════════════════════
+   INIT ON LOAD
+══════════════════════════════════════════════ */
+window.addEventListener('DOMContentLoaded', () => {
+  // Seed default rows (before restore, so restore can override)
+  _addSeat(); _addSeat(); _addSeat(); // Visionary, Integrator, + blank
+  for (let i = 0; i < 6; i++) _addPARow();   // 6 blank people rows
+  for (let i = 0; i < 3; i++) _addIssue();   // 3 starter issue rows
+  for (let i = 0; i < 3; i++) _addScorecard();
+  for (let i = 0; i < 3; i++) _addProcess();
+  for (let i = 0; i < 2; i++) _addRockSimple('rocks-vto');
+  for (let i = 0; i < 2; i++) _addRockFull('all-rocks');
+  for (let i = 0; i < 2; i++) _addAction();
+
+  // Pre-fill Accountability Chart seats
+  const seatNames = ['Visionary (CEO)', 'Integrator (COO)', 'Head of Advisor Growth'];
+  document.querySelectorAll('#seats-table tr').forEach((tr, i) => {
+    const inp = tr.querySelector('input[type="text"]');
+    if (inp && seatNames[i]) inp.placeholder = seatNames[i];
+  });
+
+  // Pre-fill L10 agenda
+  document.getElementById('f-l10-agenda').value =
+`1. Good News (5 min)
+2. Scorecard Review (5 min)
+3. Rock Review (5 min)
+4. Customer / Employee Headlines (5 min)
+5. To-Do List Review (5 min)
+6. IDS — Issues (65 min)
+7. Conclude + Rate the Meeting (5 min)`;
+
+  // Try URL hash first (share link)
+  const hash = location.hash;
+  if (hash.startsWith('#d=')) {
+    try {
+      const json = decodeURIComponent(escape(atob(hash.slice(3))));
+      restoreData(JSON.parse(json));
+      showStatus('Loaded from share link ✓', 3000);
+      return;
+    } catch(e) { /* fall through */ }
+  }
+
+  // Then localStorage
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    try { restoreData(JSON.parse(saved)); } catch(e) {}
+  }
+});
+</script>
+
+</body>
+</html>
