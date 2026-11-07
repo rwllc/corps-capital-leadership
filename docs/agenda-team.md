@@ -207,7 +207,7 @@ Jasmine adds her issues. We work through what can be resolved. What can't goes o
 ---
 
 ## WEDNESDAY, NOVEMBER 11
-*Full Team · 9:00am – 4:30pm*
+*Full Team · 9:00am – 4:00pm*
 *Tom Morgan · Tino Maniatis · Brian Trueblood · Jasmine Morgan · Bonnie · Bob Wood*
 *(Connie tentative · Michael tentative)*
 
@@ -285,7 +285,7 @@ We work through the company's highest-priority issues together.
 
 ---
 
-### 3:30 – 4:30 | CLOSE: ROCKS + NEXT STEPS
+### 3:30 – 4:00 | CLOSE: ROCKS + NEXT STEPS
 *Bob facilitates*
 
 We set Q4 Rocks — the 3–7 most important 90-day priorities for CORPS Capital. Each Rock gets:
