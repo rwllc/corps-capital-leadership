@@ -1,5 +1,5 @@
 # CORPS CAPITAL COMPANIES
-## 3-Day EOS Leadership Session
+## 3-Day Strategic Leadership Session
 ### November 9–11, 2026 · Dallas
 
 ---
@@ -38,54 +38,201 @@ The primary tool is the **V/TO (Vision/Traction Organizer)** — a two-page docu
 
 ---
 
-## SCHEDULE OVERVIEW
-
-### MONDAY, NOVEMBER 9
+## MONDAY, NOVEMBER 9
 *Tom Morgan · Tino Maniatis · Bob Wood*
 *9:00am – 1:00pm*
 
-Leadership alignment session. Tom and Tino work through the V/TO and Accountability Chart together, establishing a shared starting point for the week.
+---
+
+### 9:00 – 9:30 | COMPANY VISION PRESENTATION
+Tom presents the Strategic Wingman Partnership deck — the platform structure, the aircraft formation model, roles, and the operating vision for the firm.
 
 ---
 
-### TUESDAY, NOVEMBER 10
+### 9:30 – 10:00 | DISCUSSION
+*Bob facilitates*
+Open discussion on the vision, direction, and what the firm is building toward.
 
-**Morning · 9:00am – 12:00pm**
+---
+
+### 10:00 – 10:15 | BREAK
+
+---
+
+### 10:15 – 10:45 | EOS: THE MODEL
+*Bob introduces · Tom + Tino engage*
+
+Bob walks through the EOS Model — the six-component framework. Orientation only today — no deep dive yet.
+
+**What we cover:**
+- The six components: Vision, People, Data, Issues, Process, Traction
+- Why the order matters
+- The V/TO (Vision/Traction Organizer) as the one-page tool that holds it all together
+
+---
+
+### 10:45 – 11:45 | VISION: BUILDING THE V/TO
+*Bob facilitates · Tom + Tino build*
+
+Work through the eight questions on the V/TO together — the foundation that the full team will refine on Wednesday.
+
+**The 8 V/TO Questions:**
+
+1. **CORPS Values** — What 3–5 values are non-negotiable for this firm?
+2. **CORPS Focus** — Why does CORPS Capital exist beyond making money? What is the firm's niche?
+3. **10-Year Target** — What is the single, clear, compelling goal for the firm in 10 years?
+4. **Marketing Strategy** — Who is the right client? What are CORPS Capital's Three Uniques?
+5. **3-Year Picture** — Revenue, AUM, team size, market position — what does the firm look like in 3 years?
+6. **1-Year Plan** — Revenue, profit, and 3–7 goals that must happen this year
+7. **Rocks (this quarter)** — The 3–7 most critical priorities for Q4 2026, with one owner per Rock
+8. **Issues List** — What belongs on the long-term Issues List that the firm needs to solve?
+
+**Working materials:** V/TO template (page 1 today; page 2 is reference)
+
+---
+
+### 11:45 – 12:30 | PEOPLE: ACCOUNTABILITY CHART DRAFT
+*Bob introduces tools · Tom + Tino sketch the chart*
+
+Bob introduces the Accountability Chart (function-first, one seat per name) and GWC (Gets it / Wants it / Capacity). Tom and Tino begin sketching the chart — functions first, then names.
+
+**Key functions:**
+- Visionary
+- Integrator
+- Client Management / Wealth Management Lead
+- Deal Flow / Ventures Lead
+- Operations / Compliance
+- Finance / Reporting
+
+Names go in second. Open seats are not failures — they're clarity about what the firm needs.
+
+---
+
+### 12:30 – 1:00 | ISSUES: IDS TRIAGE
+*Bob facilitates · Tom + Tino surface issues*
+
+Work through the Issues Solving Track. Prioritize the top 3–5 issues to bring into Tuesday and Wednesday.
+
+**IDS structure:**
+- **Identify:** What is the *real* issue?
+- **Discuss:** Say it once.
+- **Solve:** A decision + a to-do + an owner. If it can't be solved today, it goes on the Issues List for Wednesday.
+
+---
+---
+
+## TUESDAY, NOVEMBER 10
+
+---
+
+### MORNING SESSION — 9:00am – 12:00pm
 *Tom Morgan · Tino Maniatis · Brian Trueblood · Bob Wood*
 
-Brian joins for an EOS walkthrough, V/TO review, and Issues session.
+---
 
-**Afternoon · 1:00pm – 4:00pm**
+### 9:00 – 9:30 | TOM PRESENTS THE DECK TO BRIAN
+*Tom leads · Bob facilitates*
+
+Tom presents the Strategic Wingman Partnership deck to Brian — same structure as Monday. Brian sees the vision and the direction of the firm directly from Tom.
+
+---
+
+### 9:30 – 10:15 | BRIAN'S RESPONSE + DISCUSSION
+*Bob facilitates*
+
+Brian gives his honest read. Any proposed changes go through the IDS structure.
+
+---
+
+### 10:15 – 10:30 | BREAK
+
+---
+
+### 10:30 – 11:15 | EOS WALKTHROUGH WITH BRIAN
+*Bob facilitates · Brian engages with the model*
+
+Brian sees the EOS framework, the V/TO draft, and the Accountability Chart. This is an orientation and input session — Brian understands the system and his place in it.
+
+---
+
+### 11:15 – 12:00 | BRIAN'S ISSUES + IDS TRIAGE
+*Bob facilitates*
+
+Brian adds to the Issues List. We work through what can be resolved today. What can't goes on the list for Wednesday.
+
+---
+
+### 12:00 – 1:00 | LUNCH BREAK
+*Brian departs*
+
+---
+
+### AFTERNOON SESSION — 1:00pm – 4:00pm
 *Tom Morgan · Tino Maniatis · Jasmine Morgan · Bob Wood*
 *(Michael tentative)*
 
-Jasmine joins for the same process — EOS overview, V/TO input, and Issues session.
+---
+
+### 1:00 – 1:30 | TOM PRESENTS THE DECK TO JASMINE
+*Tom leads · Bob facilitates*
+
+Tom presents to Jasmine. Same structure as the Brian session.
 
 ---
 
-### WEDNESDAY, NOVEMBER 11
+### 1:30 – 2:15 | JASMINE'S RESPONSE + DISCUSSION
+*Bob facilitates*
+
+Jasmine responds. Her input shapes the final V/TO and Accountability Chart going into Wednesday.
+
+---
+
+### 2:15 – 2:30 | BREAK
+
+---
+
+### 2:30 – 3:15 | EOS WITH JASMINE + V/TO UPDATE
+*Bob facilitates*
+
+Walk Jasmine through the EOS Model and the updated V/TO. Jasmine adds her perspective on CORPS, the 3-Year Picture, and the Rocks.
+
+---
+
+### 3:15 – 4:00 | JASMINE'S ISSUES + IDS TRIAGE
+*Bob facilitates*
+
+Jasmine adds her issues. We work through what can be resolved. What can't goes on the list for Wednesday.
+
+---
+---
+
+## WEDNESDAY, NOVEMBER 11
 *Full Team · 9:00am – 4:00pm*
 *Tom Morgan · Tino Maniatis · Brian Trueblood · Jasmine Morgan · Bonnie · Bob Wood*
 *(Connie tentative · Michael tentative)*
 
-The full team comes together to finalize the V/TO, confirm the Accountability Chart, work through the People Analyzer, and IDS the company's most important issues.
-
 ---
-
-## WEDNESDAY DETAIL
 
 ### MORNING SESSION — 9:00am – 12:00pm
 
-**9:00 – 9:30 | COMPANY VISION PRESENTATION**
+---
+
+### 9:00 – 9:30 | COMPANY VISION PRESENTATION
 Tom and Tino present the Strategic Wingman Partnership vision to the full team — the platform structure, the roles, and where CORPS Capital is going.
 
-**9:30 – 10:00 | OPEN DISCUSSION**
+---
+
+### 9:30 – 10:00 | OPEN DISCUSSION
 *Bob facilitates*
 The team responds, asks questions, and shares perspective. This is the conversation that gets everyone on the same page.
 
-**10:00 – 10:15 | BREAK**
+---
 
-**10:15 – 11:00 | EOS FULL TEAM WALKTHROUGH**
+### 10:00 – 10:15 | BREAK
+
+---
+
+### 10:15 – 11:00 | EOS FULL TEAM WALKTHROUGH
 *Bob presents · Tom + Tino reinforce*
 Bob walks the team through the EOS Model and the V/TO draft built Monday and Tuesday. The team reviews and refines it together.
 
@@ -99,7 +246,9 @@ The eight questions we finalize as a team:
 7. **Rocks (Q4 2026)** — Our 3–7 most critical 90-day priorities
 8. **Issues List** — What belongs on the long-term list?
 
-**11:00 – 12:00 | PEOPLE ANALYZER — CURRENT TEAM**
+---
+
+### 11:00 – 12:00 | PEOPLE ANALYZER — CURRENT TEAM
 *Bob facilitates · Full team participates*
 Using the CORPS Values from our V/TO, we evaluate each seat against three questions: Does this person **Get it**? Do they **Want it**? Do they have the **Capacity** for it? This is a structured, honest conversation — not a performance review.
 
@@ -111,13 +260,19 @@ Using the CORPS Values from our V/TO, we evaluate each seat against three questi
 
 ### AFTERNOON SESSION — 1:00pm – 4:00pm
 
-**1:00 – 2:00 | PEOPLE ANALYZER — POTENTIAL NEW ADDITIONS**
+---
+
+### 1:00 – 2:00 | PEOPLE ANALYZER — POTENTIAL NEW ADDITIONS
 *Bob facilitates*
 We apply the same framework to candidates being considered for open seats — CORPS columns and GWC questions. The tool makes this objective, not personal.
 
-**2:00 – 2:15 | BREAK**
+---
 
-**2:15 – 3:30 | ISSUES: FULL TEAM IDS SESSION**
+### 2:00 – 2:15 | BREAK
+
+---
+
+### 2:15 – 3:30 | ISSUES: FULL TEAM IDS SESSION
 *Bob facilitates using the Issues Solving Track*
 
 The Issues Solving Track — **Identify, Discuss, Solve** — is how EOS teams make decisions without circular conversation.
@@ -128,7 +283,9 @@ The Issues Solving Track — **Identify, Discuss, Solve** — is how EOS teams m
 
 We work through the company's highest-priority issues together.
 
-**3:30 – 4:00 | CLOSE: ROCKS + NEXT STEPS**
+---
+
+### 3:30 – 4:00 | CLOSE: ROCKS + NEXT STEPS
 *Bob facilitates*
 
 We set Q4 Rocks — the 3–7 most important 90-day priorities for CORPS Capital. Each Rock gets:
