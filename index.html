@@ -253,6 +253,116 @@
       body { background: #fff; color: #111; }
       .card { background: #f8f8f8; border-color: #ccc; }
     }
+
+    /* ---- ROCKET FUEL TAB ---- */
+    .rf-hero {
+      background: linear-gradient(135deg, #121723 0%, #1a2436 100%);
+      border: 1px solid var(--gold-line);
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 32px;
+    }
+    .rf-hero h2 { margin: 0 0 8px; font-size: 22px; color: #fff; border: none; padding: 0; }
+    .rf-hero p { margin: 0; color: var(--soft); line-height: 1.65; }
+    .rf-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px; }
+    @media (max-width: 680px) { .rf-cols { grid-template-columns: 1fr; } }
+    .rf-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px 24px;
+    }
+    .rf-card.visionary { border-top: 3px solid #4a90d9; }
+    .rf-card.integrator { border-top: 3px solid var(--gold); }
+    .rf-card h3 { margin: 0 0 4px; font-size: 16px; color: #fff; }
+    .rf-card .rf-role { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 14px; }
+    .rf-card.visionary .rf-role { color: #4a90d9; }
+    .rf-card.integrator .rf-role { color: var(--gold); }
+    .rf-card ul { margin: 0; padding-left: 18px; }
+    .rf-card ul li { margin-bottom: 5px; color: var(--ink); font-size: 13px; line-height: 1.55; }
+    .rf-card .rf-blind { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+    .rf-card .rf-blind-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 6px; font-weight: 700; }
+    .rf-rule {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .rf-rule-num {
+      background: var(--gold);
+      color: #0b0e13;
+      font-weight: 800;
+      font-size: 15px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .rf-rule-body h4 { margin: 0 0 4px; font-size: 14px; color: var(--gold-bright); font-weight: 700; }
+    .rf-rule-body p { margin: 0; font-size: 13px; color: var(--soft); line-height: 1.55; }
+    .rf-section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      font-weight: 700;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .rf-vine {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+    .rf-vine h4 { margin: 0 0 8px; color: var(--gold-bright); font-size: 15px; }
+    .rf-vine p { margin: 0 0 10px; color: var(--soft); font-size: 13px; line-height: 1.6; }
+    .rf-vine p:last-child { margin: 0; }
+    .rf-spm {
+      background: var(--panel);
+      border: 1px solid var(--gold-line);
+      border-radius: 8px;
+      padding: 22px 26px;
+      margin-bottom: 24px;
+    }
+    .rf-spm h4 { margin: 0 0 10px; color: #fff; font-size: 15px; }
+    .rf-spm ol { margin: 0; padding-left: 20px; }
+    .rf-spm ol li { margin-bottom: 6px; color: var(--ink); font-size: 13px; }
+    .rf-spm ol li strong { color: var(--gold-bright); }
+    .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px; }
+    @media (max-width: 680px) { .video-grid { grid-template-columns: 1fr; } }
+    .video-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .video-wrap .video-embed { position: relative; padding-bottom: 56.25%; height: 0; }
+    .video-wrap .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .video-wrap .video-label { padding: 10px 14px; font-size: 12px; color: var(--soft); font-weight: 600; border-top: 1px solid var(--line); }
+    .rf-reflect {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px 26px;
+      margin-bottom: 20px;
+    }
+    .rf-reflect h4 { margin: 0 0 14px; color: var(--gold-bright); font-size: 15px; }
+    .rf-q { margin-bottom: 16px; }
+    .rf-q label { display: block; font-size: 13px; color: var(--soft); margin-bottom: 6px; font-style: italic; }
+    .rf-q textarea { width: 100%; background: var(--black); border: 1px solid var(--line); border-radius: 6px; color: var(--ink); padding: 10px 12px; font-size: 13px; font-family: inherit; resize: vertical; min-height: 60px; }
+    .rf-q textarea:focus { outline: none; border-color: var(--gold-line); }
   </style>
 </head>
 <body>
@@ -277,6 +387,7 @@
   <button class="tab-btn active" onclick="switchTab('agenda',this)">📅 Agenda</button>
   <button class="tab-btn" onclick="switchTab('vision',this)">🎯 Vision · People · Issues</button>
   <button class="tab-btn" onclick="switchTab('traction',this)">📊 Data · Process · Traction</button>
+  <button class="tab-btn" onclick="switchTab('rocketfuel',this)">🚀 Rocket Fuel · V+I</button>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════
@@ -873,6 +984,265 @@
 
 </div><!-- /pane-traction -->
 
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB 4: ROCKET FUEL · VISIONARY + INTEGRATOR
+════════════════════════════════════════════════════════ -->
+<div class="pane" id="pane-rocketfuel">
+
+  <div class="rf-hero">
+    <h2>🚀 Rocket Fuel — The Visionary + Integrator</h2>
+    <p>From <em>Rocket Fuel</em> by Gino Wickman &amp; Mark C. Winters. This is the relationship that determines whether a company reaches escape velocity — or stalls. Part 1 defines the two roles. Part 2 (Chapters 4–5) is the how-to: the Accountability Chart and the 5 Rules for making the relationship work.</p>
+  </div>
+
+  <!-- DEFINING THE TWO ROLES -->
+  <div class="rf-section-title">Part 1 — The Two Roles</div>
+
+  <div class="rf-cols">
+    <div class="rf-card visionary">
+      <div class="rf-role">The Visionary</div>
+      <h3>Sees what others can't yet see</h3>
+      <ul>
+        <li>Generates ideas constantly — often too many</li>
+        <li>Sees the big picture and future direction</li>
+        <li>Passionate, energizing, and inspiring</li>
+        <li>Strong external relationships — clients, partners, press</li>
+        <li>Challenges the status quo; thrives on new</li>
+        <li>Creative problem solver when stuck</li>
+        <li>Not great with follow-through or routine</li>
+        <li>Gets bored once the idea is proven</li>
+        <li>Operates on instinct and big-picture thinking</li>
+        <li>Would rather start 10 things than finish 1</li>
+      </ul>
+      <div class="rf-blind">
+        <div class="rf-blind-label">Blind Spots</div>
+        <ul>
+          <li>Creates chaos without realizing it</li>
+          <li>Skips process; doesn't like structure</li>
+          <li>Hard time letting go of the vine</li>
+          <li>Can undermine the Integrator with "end runs"</li>
+          <li>Why does this need a meeting? Just do it.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rf-card integrator">
+      <div class="rf-role">The Integrator</div>
+      <h3>Makes the vision real</h3>
+      <ul>
+        <li>Executes, operationalizes, and delivers</li>
+        <li>Ties the whole company together</li>
+        <li>Runs the leadership team and meeting cadence</li>
+        <li>Accountable for P&amp;L and day-to-day operations</li>
+        <li>Creates clarity, consistency, and calm</li>
+        <li>Filters the Visionary's ideas — decides what gets done</li>
+        <li>Detail-oriented; respects process</li>
+        <li>Manages people; holds the team accountable</li>
+        <li>Can say "no" to protect the organization's capacity</li>
+        <li>Sees the whole chessboard — people, resources, timing</li>
+      </ul>
+      <div class="rf-blind">
+        <div class="rf-blind-label">Blind Spots</div>
+        <ul>
+          <li>Can block the Visionary's access to the company</li>
+          <li>May dismiss the Visionary as chaotic</li>
+          <li>Can over-manage and stifle initiative</li>
+          <li>Needs to remember: they serve the vision, not control it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE RELATIONSHIP -->
+  <div class="rf-section-title">The Relationship — Why Most V+I Pairs Fail</div>
+
+  <div class="rf-vine">
+    <h4>The Visionary Trap: Letting Go of the Vine</h4>
+    <p>The hardest thing for a Visionary isn't the vision — it's giving up control of execution. Most Visionaries have done it themselves for so long that handing it to an Integrator feels like losing. It's not. It's the only way the company grows past the founder's personal bandwidth.</p>
+    <p>When the Visionary holds on, the Integrator can't lead. The team gets confused about who to listen to. The Visionary keeps making "end runs" — going directly to people below the Integrator — and trust breaks down in both directions.</p>
+    <p><strong>Rocket Fuel's premise:</strong> The Visionary provides the spark. The Integrator provides the fuel. Without both, there is no thrust.</p>
+  </div>
+
+  <div class="rf-vine">
+    <h4>The Question Every Visionary Must Answer</h4>
+    <p>What do you actually want to build — and why? Not the product, not the clients, not the revenue. What do you want this company to be in 10 years? What role do you want to play in it? What do you want to have built when you look back?</p>
+    <p>These are not abstract questions. They are the foundation of the V/TO — and they are the first thing that breaks down when a Visionary has never been asked to articulate them out loud, to their Integrator, with accountability attached.</p>
+  </div>
+
+  <!-- CHAPTER 4: ACCOUNTABILITY CHART -->
+  <div class="rf-section-title">Chapter 4 — The Accountability Chart</div>
+
+  <div class="rf-spm">
+    <h4>The Structure That Makes the Relationship Work</h4>
+    <p style="font-size:13px;color:var(--soft);margin:0 0 14px;">The Accountability Chart is not an org chart. It's a function-first map of how the company runs — and it has one non-negotiable structural rule:</p>
+    <ol>
+      <li><strong>Visionary sits at the top.</strong> Vision, culture, major relationships, and R&amp;D are the Visionary's domain.</li>
+      <li><strong>Integrator sits directly below.</strong> All major functions — Sales, Operations, Finance, People — report to the Integrator, not the Visionary.</li>
+      <li><strong>The Visionary does not have direct reports below the Integrator</strong> (with rare exceptions for special roles). This is the structural enforcement of the relationship.</li>
+      <li><strong>Open seats are not failures — they are clarity.</strong> A blank seat named "Ventures Lead" tells you exactly what the firm needs next.</li>
+    </ol>
+    <p style="font-size:13px;color:var(--muted);margin:10px 0 0;"><em>Use the People tab to build CORPS Capital's Accountability Chart with this structure as the foundation.</em></p>
+  </div>
+
+  <!-- CHAPTER 5: THE 5 RULES -->
+  <div class="rf-section-title">Chapter 5 — The 5 Rules for the V+I Relationship</div>
+
+  <div class="rf-rule">
+    <div class="rf-rule-num">1</div>
+    <div class="rf-rule-body">
+      <h4>Stay on the same page</h4>
+      <p>The Visionary and Integrator hold a regular Same Page Meeting — just the two of them. Issues are surfaced and resolved between them before they reach the leadership team. This is the most important habit in the relationship.</p>
+    </div>
+  </div>
+
+  <div class="rf-rule">
+    <div class="rf-rule-num">2</div>
+    <div class="rf-rule-body">
+      <h4>No end runs</h4>
+      <p>The Visionary communicates to the leadership team <em>through</em> the Integrator — not around them. Going directly to the Integrator's direct reports with direction, tasks, or strategy undermines the Integrator's authority and creates confusion throughout the organization.</p>
+    </div>
+  </div>
+
+  <div class="rf-rule">
+    <div class="rf-rule-num">3</div>
+    <div class="rf-rule-body">
+      <h4>The Integrator is the tie-breaker</h4>
+      <p>On operational decisions, the Integrator has final say. This protects the organization from the Visionary's instinct to override or second-guess execution decisions. The Visionary owns the vision; the Integrator owns the how.</p>
+    </div>
+  </div>
+
+  <div class="rf-rule">
+    <div class="rf-rule-num">4</div>
+    <div class="rf-rule-body">
+      <h4>The Integrator cannot block the Visionary from the company</h4>
+      <p>The Integrator's role is not to be a gatekeeper. The Visionary must have access — to people, to clients, to culture. If the Integrator closes off the Visionary, the relationship breaks down from the other direction. Both rules 2 and 4 must be honored simultaneously.</p>
+    </div>
+  </div>
+
+  <div class="rf-rule">
+    <div class="rf-rule-num">5</div>
+    <div class="rf-rule-body">
+      <h4>Mutual respect — celebrate the differences</h4>
+      <p>The Visionary thinks the Integrator is too slow. The Integrator thinks the Visionary is reckless. Both are right — and both are essential. The relationship only works when both roles are genuinely valued, not tolerated. When the V+I pair shows up as a united front, the whole team takes its cue from them.</p>
+    </div>
+  </div>
+
+  <!-- THE SAME PAGE MEETING -->
+  <div class="rf-section-title">The Same Page Meeting®</div>
+
+  <div class="rf-spm">
+    <h4>The Weekly Check-In That Keeps Everything Together</h4>
+    <p style="font-size:13px;color:var(--soft);margin:0 0 14px;">This is a standing meeting — just Visionary and Integrator, 60–90 minutes, weekly or bi-weekly. It is the single most important process discipline in the V+I relationship.</p>
+    <ol>
+      <li><strong>What's up</strong> — What happened this week? Good news, bad news, anything important to know.</li>
+      <li><strong>Open issues</strong> — What's on the Issues List that needs resolution between the two of you, before it reaches the team?</li>
+      <li><strong>What the Integrator needs from the Visionary</strong> — Decisions, clarity, priorities.</li>
+      <li><strong>What the Visionary needs from the Integrator</strong> — Updates, access, unblocking.</li>
+      <li><strong>To-dos from last meeting</strong> — What was committed? What got done?</li>
+      <li><strong>Rocks check</strong> — On track or off track on 90-day priorities?</li>
+    </ol>
+    <p style="font-size:13px;color:var(--muted);margin:10px 0 0;"><em>Cadence: Weekly is ideal. Minimum bi-weekly. If you skip it, issues accumulate and surface at the worst possible time.</em></p>
+  </div>
+
+  <!-- VIDEOS -->
+  <div class="rf-section-title">From the Source — EOS Worldwide Videos</div>
+
+  <div class="video-grid">
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/TAt0hIcoER8" title="What is Rocket Fuel?" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">What is Rocket Fuel? — Mark C. Winters, co-author</div>
+    </div>
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/Q8iOGtJqQz8" title="The 5 Rules — Visionary/Integrator Relationship" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">The Five Rules — Keys to a Successful V/I Relationship</div>
+    </div>
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/QDp4mTyoj3s" title="The Importance of the Same Page Meeting" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">The Same Page Meeting® — Why It Matters</div>
+    </div>
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/i6_b23kC1ok" title="10 Truths About the V/I Duo" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">10 Truths About the V/I Duo™</div>
+    </div>
+  </div>
+
+  <div class="video-grid">
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/JXtXyPphI1c" title="Mastering Your Visionary Integrator Relationship" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">Mastering Your V/I Relationship</div>
+    </div>
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/EGiKO_dIGm0" title="Same Page Meetings — EOS Mastery" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">Same Page Meetings — How They Work for All Leaders</div>
+    </div>
+  </div>
+
+  <!-- REFLECTION -->
+  <div class="rf-section-title">Session Notes — V+I Conversation</div>
+
+  <div class="rf-reflect">
+    <h4>Visionary: Tom's Reflection</h4>
+    <div class="rf-q">
+      <label>Where does the firm need to be in 10 years — and what role do you want to play in it?</label>
+      <textarea id="rf-tom-10yr" placeholder="Tom's answer..."></textarea>
+    </div>
+    <div class="rf-q">
+      <label>What would you need to trust Tino with fully, that you haven't yet let go of?</label>
+      <textarea id="rf-tom-vine" placeholder="Tom's answer..."></textarea>
+    </div>
+    <div class="rf-q">
+      <label>What would need to be true for you to operate with Tino as your tie-breaker?</label>
+      <textarea id="rf-tom-tiebreak" placeholder="Tom's answer..."></textarea>
+    </div>
+  </div>
+
+  <div class="rf-reflect">
+    <h4>Integrator: Tino's Reflection</h4>
+    <div class="rf-q">
+      <label>What does the Integrator role at CORPS Capital need to include for you to fully commit to it?</label>
+      <textarea id="rf-tino-role" placeholder="Tino's answer..."></textarea>
+    </div>
+    <div class="rf-q">
+      <label>Where have you felt blocked from leading the way you need to lead?</label>
+      <textarea id="rf-tino-blocked" placeholder="Tino's answer..."></textarea>
+    </div>
+    <div class="rf-q">
+      <label>What would a Same Page Meeting with Tom look like for you to find it valuable?</label>
+      <textarea id="rf-tino-spm" placeholder="Tino's answer..."></textarea>
+    </div>
+  </div>
+
+  <div class="rf-reflect">
+    <h4>Bob's Session Notes</h4>
+    <div class="rf-q">
+      <label>Key alignment moments observed:</label>
+      <textarea id="rf-bob-align" placeholder="Notes..."></textarea>
+    </div>
+    <div class="rf-q">
+      <label>Tensions surfaced — issues to carry forward:</label>
+      <textarea id="rf-bob-tension" placeholder="Notes..."></textarea>
+    </div>
+    <div class="rf-q">
+      <label>Agreed next steps / commitments from this session:</label>
+      <textarea id="rf-bob-next" placeholder="Notes..."></textarea>
+    </div>
+  </div>
+
+</div><!-- /pane-rocketfuel -->
+
+
 <footer>
   CORPS Capital Companies &middot; 3-Day Strategic Leadership Session &middot; Dallas, TX &middot; November 9&ndash;11, 2026
 </footer>
@@ -922,7 +1292,7 @@ document.addEventListener('change', triggerSave);
 function collectData() {
   const d = {};
   // Named text fields
-  document.querySelectorAll('[id^="f-"], [id^="pa-v"]').forEach(el => {
+  document.querySelectorAll('[id^="f-"], [id^="pa-v"], [id^="rf-"]').forEach(el => {
     d[el.id] = el.value;
   });
   // Tables
