@@ -363,6 +363,105 @@
     .rf-q label { display: block; font-size: 13px; color: var(--soft); margin-bottom: 6px; font-style: italic; }
     .rf-q textarea { width: 100%; background: var(--black); border: 1px solid var(--line); border-radius: 6px; color: var(--ink); padding: 10px 12px; font-size: 13px; font-family: inherit; resize: vertical; min-height: 60px; }
     .rf-q textarea:focus { outline: none; border-color: var(--gold-line); }
+
+    /* ---- ROCKET FUEL: GWC ASSESSMENT ---- */
+    .gwc-intro { font-size: 13px; color: var(--soft); margin: 0 0 20px; line-height: 1.65; }
+    .gwc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 860px) { .gwc-grid { grid-template-columns: 1fr; } }
+    .gwc-cand {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .gwc-cand-header { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .gwc-cand-name { font-size: 16px; font-weight: 800; color: #fff; margin: 0 0 3px; }
+    .gwc-cand-role { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-bottom: 0; }
+    .gwc-cand-context { font-size: 12px; color: var(--soft); line-height: 1.55; margin: 8px 0 0; font-style: italic; }
+    .gwc-row { display: flex; flex-direction: column; gap: 6px; }
+    .gwc-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--gold); }
+    .gwc-label span { color: var(--muted); font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 11px; }
+    .gwc-select {
+      width: 100%;
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      padding: 7px 10px;
+      font-size: 13px;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .gwc-select:focus { outline: none; border-color: var(--gold-line); }
+    .gwc-notes-field {
+      width: 100%;
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      padding: 7px 10px;
+      font-size: 12px;
+      font-family: inherit;
+      resize: vertical;
+      min-height: 48px;
+      line-height: 1.5;
+    }
+    .gwc-notes-field::placeholder { color: var(--muted); }
+    .gwc-notes-field:focus { outline: none; border-color: var(--gold-line); }
+    .gwc-overall label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--soft); margin-bottom: 6px; }
+
+    /* ---- ROCKET FUEL: BOB'S RECOMMENDATION ---- */
+    .rec-card {
+      background: linear-gradient(135deg, #0e1520 0%, #111827 100%);
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 32px;
+    }
+    .rec-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+    .rec-name { font-size: 24px; font-weight: 900; color: #fff; margin: 0 0 4px; letter-spacing: -.01em; }
+    .rec-name span { color: var(--gold-bright); }
+    .rec-subtitle { font-size: 13px; color: var(--soft); margin: 0 0 24px; font-style: italic; }
+    .rec-body { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 680px) { .rec-body { grid-template-columns: 1fr; } }
+    .rec-gwc-row { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .rec-gwc-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .rec-gwc-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .rec-gwc-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--gold); margin-bottom: 3px; }
+    .rec-gwc-verdict { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .rec-gwc-why { font-size: 12px; color: var(--soft); line-height: 1.6; }
+    .rec-col-constraints { display: flex; flex-direction: column; gap: 14px; }
+    .rec-constraint {
+      background: rgba(199,154,59,.08);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+    }
+    .rec-constraint.muted { border-left-color: var(--soft); background: rgba(159,176,192,.06); }
+    .rec-constraint h5 { margin: 0 0 8px; font-size: 13px; color: var(--gold-bright); }
+    .rec-constraint.muted h5 { color: var(--soft); }
+    .rec-constraint p { margin: 0; font-size: 12px; color: var(--soft); line-height: 1.6; }
+    .rec-constraint ul { margin: 8px 0 0; padding-left: 18px; }
+    .rec-constraint li { font-size: 12px; color: var(--soft); line-height: 1.6; margin-bottom: 4px; }
+    .rec-others { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 680px) { .rec-others { grid-template-columns: 1fr; } }
+    .rec-other { background: rgba(42,52,69,.4); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .rec-other-name { font-size: 13px; font-weight: 800; color: var(--soft); margin: 0 0 7px; }
+    .rec-other-why { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    /* ---- ROCKET FUEL: VIDEO CATEGORIES ---- */
+    .video-cat-header { display: flex; align-items: center; gap: 12px; margin: 24px 0 10px; }
+    .video-cat-label { font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: var(--gold); white-space: nowrap; }
+    .video-cat-line { flex: 1; height: 1px; background: var(--line); }
+    .video-cat-desc { font-size: 12px; color: var(--muted); margin: -4px 0 14px; font-style: italic; }
   </style>
 </head>
 <body>
@@ -1144,8 +1243,229 @@
     <p style="font-size:13px;color:var(--muted);margin:10px 0 0;"><em>Cadence: Weekly is ideal. Minimum bi-weekly. If you skip it, issues accumulate and surface at the worst possible time.</em></p>
   </div>
 
+  <!-- WHO IS THE INTEGRATOR -->
+  <div class="rf-section-title">Who Is the Integrator at CORPS Capital?</div>
+
+  <p class="gwc-intro">Use GWC to evaluate the three people in the room for the Integrator seat. <strong>Gets It</strong> = natural instinct for the role. <strong>Wants It</strong> = genuine desire to hold that responsibility. <strong>Has Capacity</strong> = the time, authority, and bandwidth to actually do it. All three must be true.</p>
+
+  <div class="gwc-grid">
+
+    <!-- TINO -->
+    <div class="gwc-cand">
+      <div class="gwc-cand-header">
+        <div class="gwc-cand-name">Tino Maniatis</div>
+        <div class="gwc-cand-role">Co-Founder · Proposed Integrator</div>
+        <div class="gwc-cand-context">Closest to the operational core. Understands the gap between Tom's vision and execution. Has stayed through the hard moments. The natural candidate — if the authority is real.</div>
+      </div>
+      <div class="gwc-row">
+        <div class="gwc-label">Gets It <span>— does the role make natural sense?</span></div>
+        <select class="gwc-select" id="rf-gwc-tino-gi">
+          <option value="">— evaluate —</option>
+          <option value="strong-yes">✅ Strong Yes</option>
+          <option value="yes">👍 Yes</option>
+          <option value="maybe">❓ Maybe / Unsure</option>
+          <option value="no">❌ No</option>
+        </select>
+        <textarea class="gwc-notes-field" id="rf-gwc-tino-gi-n" placeholder="What you observed..."></textarea>
+      </div>
+      <div class="gwc-row">
+        <div class="gwc-label">Wants It <span>— genuine desire for this responsibility?</span></div>
+        <select class="gwc-select" id="rf-gwc-tino-wi">
+          <option value="">— evaluate —</option>
+          <option value="strong-yes">✅ Strong Yes</option>
+          <option value="yes">👍 Yes</option>
+          <option value="maybe">❓ Maybe / Unsure</option>
+          <option value="no">❌ No</option>
+        </select>
+        <textarea class="gwc-notes-field" id="rf-gwc-tino-wi-n" placeholder="What you observed..."></textarea>
+      </div>
+      <div class="gwc-row">
+        <div class="gwc-label">Has Capacity <span>— time, authority, and bandwidth?</span></div>
+        <select class="gwc-select" id="rf-gwc-tino-cap">
+          <option value="">— evaluate —</option>
+          <option value="strong-yes">✅ Strong Yes</option>
+          <option value="yes">👍 Yes</option>
+          <option value="maybe">❓ Maybe / Unsure</option>
+          <option value="no">❌ No</option>
+        </select>
+        <textarea class="gwc-notes-field" id="rf-gwc-tino-cap-n" placeholder="What you observed..."></textarea>
+      </div>
+      <div class="gwc-overall">
+        <label>Overall Assessment</label>
+        <textarea class="gwc-notes-field" id="rf-gwc-tino-overall" placeholder="Overall read on Tino as Integrator..." style="min-height:64px;"></textarea>
+      </div>
+    </div>
+
+    <!-- JASMINE -->
+    <div class="gwc-cand">
+      <div class="gwc-cand-header">
+        <div class="gwc-cand-name">Jasmine Morgan</div>
+        <div class="gwc-cand-role">Operations · Succession Candidate</div>
+        <div class="gwc-cand-context">Emotionally honest, operationally sharp, deeply invested in CORPS Capital's future. The father-daughter dynamic creates structural risk in the Integrator seat today. The long-view candidate.</div>
+      </div>
+      <div class="gwc-row">
+        <div class="gwc-label">Gets It <span>— does the role make natural sense?</span></div>
+        <select class="gwc-select" id="rf-gwc-jasmine-gi">
+          <option value="">— evaluate —</option>
+          <option value="strong-yes">✅ Strong Yes</option>
+          <option value="yes">👍 Yes</option>
+          <option value="maybe">❓ Maybe / Unsure</option>
+          <option value="no">❌ No</option>
+        </select>
+        <textarea class="gwc-notes-field" id="rf-gwc-jasmine-gi-n" placeholder="What you observed..."></textarea>
+      </div>
+      <div class="gwc-row">
+        <div class="gwc-label">Wants It <span>— genuine desire for this responsibility?</span></div>
+        <select class="gwc-select" id="rf-gwc-jasmine-wi">
+          <option value="">— evaluate —</option>
+          <option value="strong-yes">✅ Strong Yes</option>
+          <option value="yes">👍 Yes</option>
+          <option value="maybe">❓ Maybe / Unsure</option>
+          <option value="no">❌ No</option>
+        </select>
+        <textarea class="gwc-notes-field" id="rf-gwc-jasmine-wi-n" placeholder="What you observed..."></textarea>
+      </div>
+      <div class="gwc-row">
+        <div class="gwc-label">Has Capacity <span>— time, authority, and bandwidth?</span></div>
+        <select class="gwc-select" id="rf-gwc-jasmine-cap">
+          <option value="">— evaluate —</option>
+          <option value="strong-yes">✅ Strong Yes</option>
+          <option value="yes">👍 Yes</option>
+          <option value="maybe">❓ Maybe / Unsure</option>
+          <option value="no">❌ No</option>
+        </select>
+        <textarea class="gwc-notes-field" id="rf-gwc-jasmine-cap-n" placeholder="What you observed..."></textarea>
+      </div>
+      <div class="gwc-overall">
+        <label>Overall Assessment</label>
+        <textarea class="gwc-notes-field" id="rf-gwc-jasmine-overall" placeholder="Overall read on Jasmine as Integrator..." style="min-height:64px;"></textarea>
+      </div>
+    </div>
+
+    <!-- BRIAN -->
+    <div class="gwc-cand">
+      <div class="gwc-cand-header">
+        <div class="gwc-cand-name">Brian Trueblood</div>
+        <div class="gwc-cand-role">Client Relations · Wealth Management</div>
+        <div class="gwc-cand-context">Operationally experienced and direct. Has surfaced the firm's hardest truths. Relationship with Tom carries unresolved friction. A key voice — not the seat, at this stage.</div>
+      </div>
+      <div class="gwc-row">
+        <div class="gwc-label">Gets It <span>— does the role make natural sense?</span></div>
+        <select class="gwc-select" id="rf-gwc-brian-gi">
+          <option value="">— evaluate —</option>
+          <option value="strong-yes">✅ Strong Yes</option>
+          <option value="yes">👍 Yes</option>
+          <option value="maybe">❓ Maybe / Unsure</option>
+          <option value="no">❌ No</option>
+        </select>
+        <textarea class="gwc-notes-field" id="rf-gwc-brian-gi-n" placeholder="What you observed..."></textarea>
+      </div>
+      <div class="gwc-row">
+        <div class="gwc-label">Wants It <span>— genuine desire for this responsibility?</span></div>
+        <select class="gwc-select" id="rf-gwc-brian-wi">
+          <option value="">— evaluate —</option>
+          <option value="strong-yes">✅ Strong Yes</option>
+          <option value="yes">👍 Yes</option>
+          <option value="maybe">❓ Maybe / Unsure</option>
+          <option value="no">❌ No</option>
+        </select>
+        <textarea class="gwc-notes-field" id="rf-gwc-brian-wi-n" placeholder="What you observed..."></textarea>
+      </div>
+      <div class="gwc-row">
+        <div class="gwc-label">Has Capacity <span>— time, authority, and bandwidth?</span></div>
+        <select class="gwc-select" id="rf-gwc-brian-cap">
+          <option value="">— evaluate —</option>
+          <option value="strong-yes">✅ Strong Yes</option>
+          <option value="yes">👍 Yes</option>
+          <option value="maybe">❓ Maybe / Unsure</option>
+          <option value="no">❌ No</option>
+        </select>
+        <textarea class="gwc-notes-field" id="rf-gwc-brian-cap-n" placeholder="What you observed..."></textarea>
+      </div>
+      <div class="gwc-overall">
+        <label>Overall Assessment</label>
+        <textarea class="gwc-notes-field" id="rf-gwc-brian-overall" placeholder="Overall read on Brian as Integrator..." style="min-height:64px;"></textarea>
+      </div>
+    </div>
+
+  </div><!-- /gwc-grid -->
+
+  <!-- BOB'S RECOMMENDATION -->
+  <div class="rf-section-title">Bob's Read — Before Dallas</div>
+
+  <div class="rec-card">
+    <div class="rec-eyebrow">Facilitator's Pre-Session Assessment · Confidential</div>
+    <div class="rec-name">Tino Maniatis <span>is the Integrator.</span></div>
+    <div class="rec-subtitle">The question isn't who. The question is whether Tom will actually let him do the job.</div>
+
+    <div class="rec-body">
+      <div class="rec-col">
+        <div class="rec-gwc-row">
+          <div class="rec-gwc-icon">✅</div>
+          <div class="rec-gwc-content">
+            <div class="rec-gwc-label">Gets It</div>
+            <div class="rec-gwc-verdict">Yes — Instinctively</div>
+            <div class="rec-gwc-why">Tino thinks in systems. He understands the gap between Tom's vision and execution because he's been living in it. The Integrator role doesn't confuse him — it's what he's already been doing without the authority to back it up.</div>
+          </div>
+        </div>
+        <div class="rec-gwc-row">
+          <div class="rec-gwc-icon">❓</div>
+          <div class="rec-gwc-content">
+            <div class="rec-gwc-label">Wants It</div>
+            <div class="rec-gwc-verdict">Confirm in the Room — Monday</div>
+            <div class="rec-gwc-why">This is the most important question on Monday. Not "do you want the title?" — but "do you genuinely want to hold this team accountable, make hard operational calls, and own P&amp;L and execution?" At this stage of his career, Tino needs to answer that honestly. A reluctant Integrator is worse than no Integrator. If the answer is conditional on real authority — that's valid, not a disqualifier. Surface it.</div>
+          </div>
+        </div>
+        <div class="rec-gwc-row">
+          <div class="rec-gwc-icon">✅</div>
+          <div class="rec-gwc-content">
+            <div class="rec-gwc-label">Has Capacity</div>
+            <div class="rec-gwc-verdict">Yes — If the Authority Is Real</div>
+            <div class="rec-gwc-why">Tino has the relationships, the credibility with the team, and the bandwidth. The capacity question isn't about him — it's about whether the authority is genuine. An Integrator without real authority is a Chief of Staff with a better title. CORPS Capital needs the real thing.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-col">
+        <div class="rec-col-constraints">
+          <div class="rec-constraint">
+            <h5>The Constraint: Tom Must Let Go of the Vine</h5>
+            <p>This is not a Tino problem. For the Integrator seat to work, Tom has to change three specific behaviors:</p>
+            <ul>
+              <li>No more end runs — stop going directly to Brian, Jasmine, or the team below Tino with direction</li>
+              <li>Tino is the tie-breaker on operations — agree to this out loud, in the room, in front of the team</li>
+              <li>Ideas go through the Same Page Meeting first — not into the team as directives</li>
+            </ul>
+            <p style="margin-top:10px;">Without this, the title is ceremonial. With it, CORPS Capital has an operating engine.</p>
+          </div>
+          <div class="rec-constraint muted">
+            <h5>The "Wants It" Question at This Stage</h5>
+            <p>Tom built CORPS Capital at a point in life when most people are thinking about legacy, not load. The question for Tino isn't just "do you want to run this company?" — it's "is this how you want to spend the next chapter?" The answer should be honest and voluntary. What does the right role look like at this point in Tino's life? That's the real Wants It conversation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec-others">
+      <div class="rec-other">
+        <div class="rec-other-name">Jasmine — Not Now. Build the Path.</div>
+        <div class="rec-other-why">Jasmine has the intelligence, the conviction, and the commitment to eventually run this firm. But holding her father accountable as his Integrator — especially with unrepaired trust damage from his anger reaction — creates a structural problem the EOS framework can't fix. The right seat for Jasmine now is a named role with real authority: Client/Wealth Management Lead or a defined succession track. She may be the right Integrator in 3–5 years. Build the path today, not the pressure.</div>
+      </div>
+      <div class="rec-other">
+        <div class="rec-other-name">Brian — Valued Voice, Wrong Seat</div>
+        <div class="rec-other-why">Brian has earned the right to be a reality check. His directness is an asset. But his relationship with Tom carries too much unresolved friction — comp, disclosure breach, deal-routing — to function as Integrator right now. He belongs in a defined seat with clearly documented role, title, and comp. That conversation happens Wednesday. The Integrator question is separate from the Brian question.</div>
+      </div>
+    </div>
+  </div><!-- /rec-card -->
+
   <!-- VIDEOS -->
-  <div class="rf-section-title">From the Source — EOS Worldwide Videos</div>
+  <div class="rf-section-title">From the Source — EOS Worldwide</div>
+
+  <div class="video-cat-header">
+    <div class="video-cat-label">Before the Session</div>
+    <div class="video-cat-line"></div>
+  </div>
+  <p class="video-cat-desc">Send these to Tom and Tino ahead of Dallas — 3–5 min each. Build a shared vocabulary before you're all in the room.</p>
 
   <div class="video-grid">
     <div class="video-wrap">
@@ -1156,15 +1476,30 @@
     </div>
     <div class="video-wrap">
       <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/Q8iOGtJqQz8" title="The 5 Rules — Visionary/Integrator Relationship" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/EVy3Oi0ucKQ" title="Visionary or Integrator? Pick One" allowfullscreen loading="lazy"></iframe>
       </div>
-      <div class="video-label">The Five Rules — Keys to a Successful V/I Relationship</div>
+      <div class="video-label">Visionary or Integrator? Pick One — The Self-Assessment</div>
     </div>
     <div class="video-wrap">
       <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/QDp4mTyoj3s" title="The Importance of the Same Page Meeting" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/htSte6vE0Nk" title="How and Where to Find Your Integrator" allowfullscreen loading="lazy"></iframe>
       </div>
-      <div class="video-label">The Same Page Meeting® — Why It Matters</div>
+      <div class="video-label">How &amp; Where to Find Your Integrator</div>
+    </div>
+  </div>
+
+  <div class="video-cat-header">
+    <div class="video-cat-label">Use During the Session</div>
+    <div class="video-cat-line"></div>
+  </div>
+  <p class="video-cat-desc">Pull these up in the room when discussion needs a catalyst. Each is a conversation starter — play 2–3 min, pause, ask the question.</p>
+
+  <div class="video-grid">
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/Q8iOGtJqQz8" title="The 5 Rules — V/I Relationship" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">The Five Rules — Keys to a Successful V/I Relationship</div>
     </div>
     <div class="video-wrap">
       <div class="video-embed">
@@ -1172,20 +1507,44 @@
       </div>
       <div class="video-label">10 Truths About the V/I Duo™</div>
     </div>
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/JXtXyPphI1c" title="Mastering Your V/I Relationship" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">Mastering Your Visionary/Integrator Relationship</div>
+    </div>
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/Qj8gUEThYj0" title="Accountability Chart Short" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">The Accountability Chart — Short Version</div>
+    </div>
   </div>
 
   <div class="video-grid">
     <div class="video-wrap">
       <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/JXtXyPphI1c" title="Mastering Your Visionary Integrator Relationship" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/QDp4mTyoj3s" title="The Same Page Meeting" allowfullscreen loading="lazy"></iframe>
       </div>
-      <div class="video-label">Mastering Your V/I Relationship</div>
+      <div class="video-label">The Same Page Meeting® — Why It Matters</div>
     </div>
     <div class="video-wrap">
       <div class="video-embed">
         <iframe src="https://www.youtube.com/embed/EGiKO_dIGm0" title="Same Page Meetings — EOS Mastery" allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="video-label">Same Page Meetings — How They Work for All Leaders</div>
+    </div>
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/y6CEVG3iB9g" title="GWC People Analyzer" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">GWC, People Analyzer &amp; Quarterly Conversations</div>
+    </div>
+    <div class="video-wrap">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/J2Dd4mysigU" title="Delegate and Elevate" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-label">Delegate &amp; Elevate — The Visionary's Tool for Letting Go</div>
     </div>
   </div>
 
