@@ -351,6 +351,15 @@
     .video-wrap .video-embed { position: relative; padding-bottom: 56.25%; height: 0; }
     .video-wrap .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
     .video-wrap .video-label { padding: 10px 14px; font-size: 12px; color: var(--soft); font-weight: 600; border-top: 1px solid var(--line); }
+    .video-row { display: flex; gap: 20px; align-items: stretch; margin-bottom: 20px; }
+    @media (max-width: 680px) { .video-row { flex-direction: column; } }
+    .video-row .video-wrap { flex: 0 0 420px; max-width: 420px; margin-bottom: 0; }
+    @media (max-width: 680px) { .video-row .video-wrap { flex: 1 1 auto; max-width: none; } }
+    .video-tool { flex: 1 1 auto; background: rgba(199,154,59,.08); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 18px 20px; display: flex; flex-direction: column; justify-content: center; }
+    .video-tool h5 { margin: 0 0 8px; font-size: 13px; color: var(--gold-bright); }
+    .video-tool p { margin: 0 0 14px; font-size: 12px; color: var(--soft); line-height: 1.6; }
+    .video-tool a.tool-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #1a1f2b; background: var(--gold-bright); padding: 9px 14px; border-radius: 6px; text-decoration: none; width: fit-content; }
+    .video-tool a.tool-link:hover { opacity: .88; }
     .rf-reflect {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -1466,87 +1475,40 @@
     <div class="video-cat-label">Before the Session</div>
     <div class="video-cat-line"></div>
   </div>
-  <p class="video-cat-desc">Send these to Tom and Tino ahead of Dallas — 3–5 min each. Build a shared vocabulary before you're all in the room.</p>
+  <p class="video-cat-desc">Send this to Tom and Tino ahead of Dallas — build a shared vocabulary before you're all in the room.</p>
 
-  <div class="video-grid">
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/TAt0hIcoER8" title="What is Rocket Fuel?" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">What is Rocket Fuel? — Mark C. Winters, co-author</div>
+  <div class="video-wrap" style="max-width:480px; margin-bottom:24px;">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/TAt0hIcoER8" title="What is Rocket Fuel?" allowfullscreen loading="lazy"></iframe>
     </div>
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/EVy3Oi0ucKQ" title="Visionary or Integrator? Pick One" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">Visionary or Integrator? Pick One — The Self-Assessment</div>
-    </div>
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/htSte6vE0Nk" title="How and Where to Find Your Integrator" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">How &amp; Where to Find Your Integrator</div>
-    </div>
+    <div class="video-label">What is Rocket Fuel? — Mark C. Winters, co-author</div>
   </div>
 
   <div class="video-cat-header">
     <div class="video-cat-label">Use During the Session</div>
     <div class="video-cat-line"></div>
   </div>
-  <p class="video-cat-desc">Pull these up in the room when discussion needs a catalyst. Each is a conversation starter — play 2–3 min, pause, ask the question.</p>
+  <p class="video-cat-desc">Pull these up in the room when discussion needs a catalyst — play a few minutes, pause, ask the question.</p>
 
-  <div class="video-grid">
+  <div class="video-row">
     <div class="video-wrap">
       <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/Q8iOGtJqQz8" title="The 5 Rules — V/I Relationship" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/R_XS78MpCEs?start=14" title="The Five Rules" allowfullscreen loading="lazy"></iframe>
       </div>
-      <div class="video-label">The Five Rules — Keys to a Successful V/I Relationship</div>
+      <div class="video-label">The Five Rules — EOS Worldwide</div>
     </div>
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/i6_b23kC1ok" title="10 Truths About the V/I Duo" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">10 Truths About the V/I Duo™</div>
-    </div>
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/JXtXyPphI1c" title="Mastering Your V/I Relationship" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">Mastering Your Visionary/Integrator Relationship</div>
-    </div>
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/Qj8gUEThYj0" title="Accountability Chart Short" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">The Accountability Chart — Short Version</div>
+    <div class="video-tool">
+      <h5>Tool: The 5 Rules</h5>
+      <p>EOS Worldwide's official companion worksheet for this video — opens in a new tab, won't interrupt playback.</p>
+      <a class="tool-link" href="https://www.eosworldwide.com/the-5-rules" target="_blank" rel="noopener">Open the 5 Rules Tool &nearr;</a>
     </div>
   </div>
 
-  <div class="video-grid">
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/QDp4mTyoj3s" title="The Same Page Meeting" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">The Same Page Meeting® — Why It Matters</div>
+  <div class="video-wrap" style="max-width:480px; margin-bottom:24px;">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/QDp4mTyoj3s" title="The Same Page Meeting" allowfullscreen loading="lazy"></iframe>
     </div>
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/EGiKO_dIGm0" title="Same Page Meetings — EOS Mastery" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">Same Page Meetings — How They Work for All Leaders</div>
-    </div>
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/y6CEVG3iB9g" title="GWC People Analyzer" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">GWC, People Analyzer &amp; Quarterly Conversations</div>
-    </div>
-    <div class="video-wrap">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/J2Dd4mysigU" title="Delegate and Elevate" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-label">Delegate &amp; Elevate — The Visionary's Tool for Letting Go</div>
-    </div>
+    <div class="video-label">The Importance of the Same Page Meeting® — EOS Worldwide</div>
   </div>
 
   <!-- REFLECTION -->
