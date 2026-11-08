@@ -430,6 +430,10 @@
     .rec-name { font-size: 24px; font-weight: 900; color: #fff; margin: 0 0 4px; letter-spacing: -.01em; }
     .rec-name span { color: var(--gold-bright); }
     .rec-subtitle { font-size: 13px; color: var(--soft); margin: 0 0 24px; font-style: italic; }
+    .rec-open-q { background: rgba(199,154,59,.08); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 0 0 24px; }
+    .rec-open-q ul { margin: 0; padding-left: 18px; }
+    .rec-open-q li { font-size: 13px; font-weight: 600; color: #fff; line-height: 1.7; margin-bottom: 6px; }
+    .rec-open-q li:last-child { margin-bottom: 0; }
     .rec-body { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
     @media (max-width: 680px) { .rec-body { grid-template-columns: 1fr; } }
     .rec-gwc-row { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
@@ -1394,9 +1398,16 @@
   <div class="rf-section-title">Bob's Read — Before Dallas</div>
 
   <div class="rec-card">
-    <div class="rec-eyebrow">Facilitator's Pre-Session Assessment · Confidential</div>
-    <div class="rec-name">Tino Maniatis <span>is the Integrator.</span></div>
-    <div class="rec-subtitle">The question isn't who. The question is whether Tom will actually let him do the job.</div>
+    <div class="rec-eyebrow">Working Notes · Integrator Discussion</div>
+    <div class="rec-name">Is Tino Maniatis <span>the Integrator?</span></div>
+    <div class="rec-open-q">
+      <ul>
+        <li>Does Tino want this role?</li>
+        <li>Does Tom want Tino in this role?</li>
+        <li>Will Tino have the capacity for conflict in this role?</li>
+        <li>Will Tom let him execute the role?</li>
+      </ul>
+    </div>
 
     <div class="rec-body">
       <div class="rec-col">
