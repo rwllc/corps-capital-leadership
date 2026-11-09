@@ -360,6 +360,20 @@
     .video-tool p { margin: 0 0 14px; font-size: 12px; color: var(--soft); line-height: 1.6; }
     .video-tool a.tool-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #1a1f2b; background: var(--gold-bright); padding: 9px 14px; border-radius: 6px; text-decoration: none; width: fit-content; }
     .video-tool a.tool-link:hover { opacity: .88; }
+    .pdf-modal-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(10,13,20,.82);
+      z-index: 999; align-items: center; justify-content: center; padding: 24px;
+    }
+    .pdf-modal-overlay.open { display: flex; }
+    .pdf-modal {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+      width: min(900px, 100%); height: min(85vh, 1000px); display: flex; flex-direction: column; overflow: hidden;
+    }
+    .pdf-modal-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+    .pdf-modal-head span { font-size: 13px; font-weight: 700; color: #fff; }
+    .pdf-modal-head button { background: none; border: 1px solid var(--line); color: var(--soft); font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+    .pdf-modal-head button:hover { color: #fff; border-color: var(--gold); }
+    .pdf-modal iframe { flex: 1 1 auto; width: 100%; border: none; }
     .rf-reflect {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -1499,8 +1513,8 @@
     </div>
     <div class="video-tool">
       <h5>Tool: The 5 Rules</h5>
-      <p>EOS Worldwide's official companion worksheet for this video — opens in a new tab, won't interrupt playback.</p>
-      <a class="tool-link" href="https://www.eosworldwide.com/the-5-rules" target="_blank" rel="noopener">Open the 5 Rules Tool &nearr;</a>
+      <p>Opens right here in the page — the video keeps running behind it, close whenever you're done.</p>
+      <a class="tool-link" href="pdfs/five-rules.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/five-rules.pdf', 'The 5 Rules')">Open the 5 Rules Tool &nearr;</a>
     </div>
   </div>
 
@@ -1580,6 +1594,20 @@ function switchTab(id, btn) {
   document.getElementById('pane-' + id).classList.add('active');
   btn.classList.add('active');
 }
+
+/* ══════════════════════════════════════════════
+   PDF TOOL MODAL (in-page viewer, no navigation away)
+══════════════════════════════════════════════ */
+function openPdfModal(url, title) {
+  document.getElementById('pdfModalFrame').src = url;
+  document.getElementById('pdfModalTitle').textContent = title || 'Tool';
+  document.getElementById('pdfModalOverlay').classList.add('open');
+}
+function closePdfModal() {
+  document.getElementById('pdfModalOverlay').classList.remove('open');
+  document.getElementById('pdfModalFrame').src = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePdfModal(); });
 
 /* ══════════════════════════════════════════════
    AUTO-SAVE (localStorage, debounced 700ms)
@@ -1890,6 +1918,16 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
+
+<div class="pdf-modal-overlay" id="pdfModalOverlay" onclick="if(event.target===this) closePdfModal()">
+  <div class="pdf-modal">
+    <div class="pdf-modal-head">
+      <span id="pdfModalTitle">Tool</span>
+      <button onclick="closePdfModal()">Close ✕</button>
+    </div>
+    <iframe id="pdfModalFrame" src="" title="PDF tool"></iframe>
+  </div>
+</div>
 
 </body>
 </html>
