@@ -374,6 +374,23 @@
     .pdf-modal-head button { background: none; border: 1px solid var(--line); color: var(--soft); font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
     .pdf-modal-head button:hover { color: #fff; border-color: var(--gold); }
     .pdf-modal iframe { flex: 1 1 auto; width: 100%; border: none; }
+    .eos-intro { font-size: 14px; color: var(--soft); line-height: 1.7; max-width: 760px; margin: 0 0 28px; }
+    .eos-component {
+      background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--gold);
+      border-radius: 0 10px 10px 0; padding: 22px 26px; margin-bottom: 18px;
+    }
+    .eos-component-num { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 4px; }
+    .eos-component h3 { margin: 0 0 8px; font-size: 19px; color: #fff; font-weight: 900; }
+    .eos-component p { margin: 0 0 16px; font-size: 13px; color: var(--soft); line-height: 1.65; max-width: 640px; }
+    .eos-tool-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .eos-tool-btn {
+      display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700;
+      color: var(--ink); background: var(--panel2); border: 1px solid var(--line);
+      padding: 9px 14px; border-radius: 6px; cursor: pointer; text-decoration: none;
+    }
+    .eos-tool-btn:hover { border-color: var(--gold); color: var(--gold-bright); }
+    .eos-tool-btn .ico { font-size: 13px; }
+    .eos-xref { margin-top: 6px; font-size: 12px; color: var(--muted); font-style: italic; }
     .rf-reflect {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -514,6 +531,7 @@
   <button class="tab-btn" onclick="switchTab('vision',this)">🎯 Vision · People · Issues</button>
   <button class="tab-btn" onclick="switchTab('traction',this)">📊 Data · Process · Traction</button>
   <button class="tab-btn" onclick="switchTab('rocketfuel',this)">🚀 Rocket Fuel · V+I</button>
+  <button class="tab-btn" onclick="switchTab('toolkit',this)">🧰 EOS Outline &amp; Toolkit</button>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════
@@ -1578,6 +1596,75 @@
 
 </div><!-- /pane-rocketfuel -->
 
+<div class="pane" id="pane-toolkit">
+
+  <div class="rf-section-title" style="margin-top:0;">The Six Key Components® of EOS</div>
+  <p class="eos-intro">Every tool below is the actual EOS Worldwide document, open it right here — nothing leaves this page, nothing goes to an outside site. Each of the Six Key Components has its own tools; some tools (like the Accountability Chart and GWC) serve more than one component at once.</p>
+
+  <div class="eos-component">
+    <div class="eos-component-num">Component 1</div>
+    <h3>Vision</h3>
+    <p>Getting everyone in the organization 100% on the same page with where the business is going, and how it's going to get there.</p>
+    <div class="eos-tool-row">
+      <a class="eos-tool-btn" href="pdfs/eos-model-overview.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/eos-model-overview.pdf','The EOS Model — One-Page Overview')"><span class="ico">📄</span> The EOS Model — One-Page Overview</a>
+      <a class="eos-tool-btn" href="pdfs/eos-model-explained.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/eos-model-explained.pdf','The EOS Model — Explained')"><span class="ico">📄</span> The EOS Model — Explained (7 pg)</a>
+      <a class="eos-tool-btn" href="pdfs/vto.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/vto.pdf','Vision/Traction Organizer (V/TO)')"><span class="ico">📄</span> Vision/Traction Organizer™ (V/TO)</a>
+    </div>
+  </div>
+
+  <div class="eos-component">
+    <div class="eos-component-num">Component 2</div>
+    <h3>People</h3>
+    <p>Surrounding yourself with great people — the Right People in the Right Seats, GWC: Get it, Want it, have the Capacity to do it.</p>
+    <div class="eos-tool-row">
+      <a class="eos-tool-btn" href="pdfs/accountability-chart.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/accountability-chart.pdf','Accountability Chart')"><span class="ico">📄</span> Accountability Chart</a>
+      <a class="eos-tool-btn" href="pdfs/people-analyzer.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/people-analyzer.pdf','People Analyzer')"><span class="ico">📄</span> People Analyzer</a>
+      <a class="eos-tool-btn" href="pdfs/gwc.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/gwc.pdf','GWC')"><span class="ico">📄</span> GWC</a>
+      <a class="eos-tool-btn" href="pdfs/delegate-elevate.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/delegate-elevate.pdf','Delegate &amp; Elevate')"><span class="ico">📄</span> Delegate &amp; Elevate</a>
+      <a class="eos-tool-btn" href="pdfs/lma-questionnaire.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/lma-questionnaire.pdf','LMA Questionnaire')"><span class="ico">📄</span> LMA Questionnaire</a>
+    </div>
+  </div>
+
+  <div class="eos-component">
+    <div class="eos-component-num">Component 3</div>
+    <h3>Data</h3>
+    <p>Cutting through the ambiguity, opinions, and emotions down to a handful of numbers that give an absolute pulse on where the business stands.</p>
+    <div class="eos-tool-row">
+      <a class="eos-tool-btn" href="pdfs/scorecard.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/scorecard.pdf','Scorecard')"><span class="ico">📄</span> Scorecard</a>
+    </div>
+  </div>
+
+  <div class="eos-component">
+    <div class="eos-component-num">Component 4</div>
+    <h3>Issues</h3>
+    <p>Becoming great at solving problems throughout the organization — setting them up, knocking them down, for good, at the root cause.</p>
+    <div class="eos-tool-row">
+      <a class="eos-tool-btn" href="pdfs/issues-solving-track.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/issues-solving-track.pdf','Issues Solving Track')"><span class="ico">📄</span> Issues Solving Track (IDS)</a>
+    </div>
+  </div>
+
+  <div class="eos-component">
+    <div class="eos-component-num">Component 5</div>
+    <h3>Process</h3>
+    <p>Systemizing the business by identifying and documenting the core processes that define the way the business runs — "The Way" — then getting everyone to follow it.</p>
+    <div class="eos-tool-row">
+      <a class="eos-tool-btn" href="pdfs/process-documenter.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/process-documenter.pdf','3-Step Process Documenter')"><span class="ico">📄</span> 3-Step Process Documenter</a>
+    </div>
+  </div>
+
+  <div class="eos-component">
+    <div class="eos-component-num">Component 6</div>
+    <h3>Traction®</h3>
+    <p>Bringing discipline and accountability into the organization — becoming great at execution, taking the vision down to the ground and making it real.</p>
+    <div class="eos-tool-row">
+      <a class="eos-tool-btn" href="pdfs/quarterly-rocks.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/quarterly-rocks.pdf','Quarterly Rocks')"><span class="ico">📄</span> Quarterly Rocks</a>
+      <a class="eos-tool-btn" href="pdfs/level-10-meeting.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/level-10-meeting.pdf','Level 10 Meeting')"><span class="ico">📄</span> Level 10 Meeting</a>
+      <a class="eos-tool-btn" href="pdfs/meeting-pulse.pdf" onclick="event.preventDefault(); openPdfModal('pdfs/meeting-pulse.pdf','Meeting Pulse')"><span class="ico">📄</span> Meeting Pulse</a>
+    </div>
+    <div class="eos-xref">The Visionary + Integrator relationship that drives Traction is covered in depth on the Rocket Fuel tab, including the 5 Rules tool.</div>
+  </div>
+
+</div><!-- /pane-toolkit -->
 
 <footer>
   CORPS Capital Companies &middot; 3-Day Strategic Leadership Session &middot; Dallas, TX &middot; November 9&ndash;11, 2026
